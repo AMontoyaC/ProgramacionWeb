@@ -1,0 +1,97 @@
+	<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Practica 4</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    
+  </head>
+  <body>
+    <h1>Practica 4</h1>
+
+    <div class="container text-center">
+    
+    <div class="row">
+    	<div class="col-md-6">
+    		<!-- No puede haber un formulario dentro de un formulario-->
+    			<!-- method (metodo por el cual se va a enviar los datos) action (a donde envio dichos archivos) -->
+    		<form method="GET" action="formulario.html">
+    			<div class="form-group">
+    				<label for="email">Email</label>
+    				<input class="form-control" 
+    					type="text" name="email" id="email"
+    					required>
+
+    				<!-- con el type="email" va a validar que la direccion que entra sea correo electronico -->
+    				<label for="email2">Email2</label>
+    				<input class="form-control" 
+    					type="email" name="email2" id="email2"
+    					required>
+
+    				<label for="foto">Foto</label>
+    				<input class="form-control" 
+    				    type="file" name="foto" id="foto"
+    				    required multiple>
+
+    			</div>
+
+    			<div class="form-group">
+    				<label for="sueldo">Sueldo</label>
+    				<div class="input-group-addon">$</div>
+    				<input class="form-control" 
+    			    	type="text" name="sueldo" id="sueldo"
+    			    	required>
+    			</div>
+
+    			<label for="descripcion">Descripción</label>
+    			<textarea class="form-control"
+    				name="descripcion" id="descripcion">
+    			</textarea>
+
+    			<div class="checkbox">
+    				<label>
+    					<input type="checkbox" name="terminos" id="terminos">
+    					Acepta terminos.
+    				</label>
+    			</div>
+
+    			<div class="radio">
+    				<label>
+    					<input type="radio" name="genero"> <!-- te deja seleccionar solo uno por que se agrupo por name (mismo 	name)-->
+    					Mujer
+    				</label>
+    				<label>
+    					<input type="radio" name="genero">
+    					Hombre
+    				</label>
+    			</div>
+
+    			<div class="form-group">
+					<select class="form-control" name="estado" id="estado">
+						<option>Guanajuato</option>
+						<option>Guerrero</option>
+						<option>Jalisco</option>
+						<option>Otro</option>
+					</select>	
+    			</div>
+
+    			<div class="form-group">
+    				<input class="btn btn-primary" type="submit" value="Guardar">
+    			</div>
+    		</form>
+    	</div>	
+
+    	<div class="col-md-6">
+    		<label for="buscar">Buscar</label>
+    		<input class="form-control" 
+    				type="search" name="buscar" id="buscar">
+    	</div>	
+	</div>	
+
+	</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  </body>
+</html> 

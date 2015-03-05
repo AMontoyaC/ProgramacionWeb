@@ -1,0 +1,146 @@
+	<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Practica 4</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- codigo javascript -->
+    <script type="text/javascript">
+    /*
+    	//alert('Hola mundo');
+
+    	//no se le tiene que indicar que tipo de variable es, esto depende del contexto
+    	var operador1 = 4;
+    	var operador2 = 6;
+
+    	//alert(operador1); //manda mensaje emergente,una alerta
+    	//alert(operador2);
+	*/	
+
+    	function calcula(operacion){
+    		var operador1 = document.calc.operador1.value;	//obtiene a traves de su propiedad name (operador)
+    					//va a navegar por todo el documento hasta encontrar el formulario y la caja de texto
+    		var operador2 = document.getElementById("operador2").value; //obtiene a traves del su id (operador)
+    		alert(operador1);
+    		alert(operador2);
+
+    		var result = eval(operador1 + operacion + operador2); 
+    		document.calc.Resultado.value=result
+    	}
+
+        function convertidorMtsPies(resolver){
+            var mts=document.convertidor1.metros.value;
+
+            var resul1=eval(mts*3.2808);
+            document.convertidor1.Resultado.value=resul1;
+        }
+
+        function convertidorKgLb(resolver){
+            var kgs=document.convertidor2.kilogramos.value;
+
+            var resul1=eval(kgs*2.20462);
+            document.convertidor2.Resultado.value=resul1;
+        }
+
+        function convertidorMlOz(resolver){
+            var mls=document.convertidor3.mililitros.value;
+
+            var resul1=eval(mls*0.033814);
+            document.convertidor3.Resultado.value=resul1;
+        }
+
+    </script>
+    
+  </head>
+  <body>
+    <h1>Practica 4</h1>
+
+    <div class="container text-center">
+    
+    <div class="row">
+    <!-- FORMULARIO OPERACIONES -->
+    	<div class="col-md-12">
+    		<!-- Formularios -->
+    		<form name="calc"> <!-- Nombre (su identificador) -->
+    			<label for="operador1">Operador 1</label>
+    			<input type="number" value="0" name="operador1" id="operador1" class="form-control text-center"> 
+    				<!-- input,Para escribir (son como cajas de texto) -->
+
+    			<label for="operador2">Operador 2</label>
+    			<input type="text" value="2" name="operador2" id="operador2" class="form-control text-center">  <!-- Tipos (type): text,number-->
+
+    			<input type="button" value="+" 
+    						onclick="calcula('+')" 
+    						class="btn btn-success">
+				<input type="button" value="-" class="btn btn-danger">
+				<input type="button" value="*" class="btn btn-primary">
+				<input type="button" value="/" class="btn btn-warning">
+
+				<!-- placeholder, muestra texto tenue y si escribes sobre el, el texto se borra -->
+    			<input type="text" value="" name="Resultado" placeholder="Resultado" class="form-control text-center"> 
+    		</form>
+    	</div>	
+    </div>
+
+    <div class="row">
+        <!-- FORMULARIO MTS A PIES -->
+    	<div class="col-md-12">
+            <form name="convertidor1">
+                <label for="mtsft">Metros a Pies</label>
+                <input type="mts" value="" name="metros" id="metros" placeholder="mts" class="form-control text-center">
+
+                <input type="button" value="=" 
+                            onclick="convertidorMtsPies('=')" 
+                            class="btn btn-success">
+
+                <input type="text" value="" name="Resultado" placeholder="ft" class="form-control text-center"> 
+
+            </form>
+    	</div>	
+
+	</div>
+
+    <div class="row">
+        <!-- FORMULARIO KGS A LBS -->
+        <div class="col-md-12">
+            <form name="convertidor2">
+                <label for="kglb">Kilogramos a Libras</label>
+                <input type="kg" value="" name="kilogramos" id="kilogramos" placeholder="kgs" class="form-control text-center">
+
+                <input type="button" value="=" 
+                            onclick="convertidorKgLb('=')" 
+                            class="btn btn-success">
+
+                <input type="text" value="" name="Resultado" placeholder="lbs" class="form-control text-center"> 
+
+            </form>
+        </div>  
+    </div>
+
+    <div class="row">
+        <!-- FORMULARIO MILILITROS A ONZAS -->
+        <div class="col-md-12">
+            <form name="convertidor3">
+                <label for="mloz">Mililitros a Onzas</label>
+                <input type="ml" value="" name="mililitros" id="mililitros" placeholder="ml" class="form-control text-center">
+
+                <input type="button" value="=" 
+                            onclick="convertidorMlOz('=')" 
+                            class="btn btn-success">
+
+                <input type="text" value="" name="Resultado" placeholder="oz" class="form-control text-center"> 
+
+            </form>
+        </div>  
+
+    </div>
+
+
+	</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  </body>
+ </html> 

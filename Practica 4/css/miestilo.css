@@ -1,0 +1,5 @@
+/* (.) por que es una clase*/
+/*la referencia que se haga, sera apartir de esta carpeta*/
+.container{
+	background-image: url("../img/img_14.jpg"); /*esta imagen se comporta como un atributo*/
+}
