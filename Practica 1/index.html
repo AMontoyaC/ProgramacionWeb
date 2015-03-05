@@ -2,7 +2,11 @@
 <html>
 	<head>
 		<title>Practica 1</title>
-		<link rel="stylesheet" type="text/css" href="css/estilo.css">  <!-- con hojas de estilo se le puede dar todo el diseño, color, forma, etc --> <!-- href es para referencias -->
+		<meta name="viewport" content="width-device-width"> <!--etiqueta meta nos monitorea el ancho del dispositivo/navegador,
+															se va a poder identificar cualquier resolucion -->
+															
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">  <!-- con hojas de estilo se le puede dar todo el diseño, color, forma, etc --> <!-- href es para referencias -->
+		<link rel="stylesheet" type="text/css" href="css/estilo.css">
 	</head>
 	<body>
 		<!-- DIV contenedor donde puedo agrupar o poner mas etiquetas, las etiquetas tienen atributos, los atributos pueden ser para asociarlos con un estilo o para modificarlos-->
@@ -22,12 +26,33 @@
 			<div class="main container clearfix">
 				<article>
 					<header>
-						<h1>Lorem ipsum dolor sit amet</h1> <!--de h1 a h6 es para escribir titulos, va de letra grande a pequeña-->
+						<h1>Lorem ipsum dolor sit amet</h1> <!--de h1 a h6 es para escribir titulos, va de letra grande a pequeña--> 
 						<p>Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. El punto de usar Lorem Ipsum es que tiene una distribución más o menos normal de las letras, al contrario de usar textos como por ejemplo "Contenido aquí, contenido aquí". Estos textos hacen parecerlo un español que se puede leer.</p> <!--etiqueta p para parrafos-->
 					</header>
 					<section>
 						<h2>Lorem ipsum dolor sit amet</h2>
 						<p>Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. El punto de usar Lorem Ipsum es que tiene una distribución más o menos normal de las letras, al contrario de usar textos como por ejemplo "Contenido aquí, contenido aquí". Estos textos hacen parecerlo un español que se puede leer.</p> 
+
+						<!--definir tabla -->
+						<table>
+							<!-- tr (tablerow) renglon, td columnas-->
+							<tr>
+								<th>Número de control</th>
+								<th>Nombre</th>
+								<th>Calificación</th>
+							</tr>
+							<tr>
+								<td>12030899</td>
+								<td>Andrea Montoya</td>
+								<td>100</td>
+							</tr>
+
+							<tr>
+								<td>12843747</td>
+								<td>Juan Perez</td>
+								<td>0</td>
+							</tr>
+						</table>
 					</section>
 					<section>
 						<h2>Lorem ipsum dolor sit amet</h2>

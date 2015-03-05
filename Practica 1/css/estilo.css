@@ -1,0 +1,176 @@
+/*selecciona etiqueta body*/
+body{
+	font-size: 1em;
+	font-family: Helvetica;
+}
+
+/*todos los elementos de la clase container*/
+.container{
+	width: 90%;
+	margin: 0 5%;
+}
+
+table{
+	width: 100%;	/*relativo a su conteneder*/
+}
+
+/*poner borde a las celdas*/
+td,th{
+	border: 1px solid black;
+}
+
+
+
+/*colores*/
+.header-container{
+	border-bottom: 20px solid #E44d26;
+}
+
+/*varios elementos diferentes asignarles el mismo estilo*/
+.footer-container, 
+.main aside{ 
+	/*aside (etiqueta) dentro de los main y los footcontainer*/
+	border-top: 20px solid #E44d26;
+}
+
+.header-container,
+.footer-container,
+.main aside{
+	background: #F16529;
+}
+
+.tittle{
+	color: white;
+}
+
+/*estilo para ver en un teléfono móvil*/
+/*nav (etiqueta) que contiene un menu*/
+/*a la lista le quita el margen y el padding*/
+nav ul{ 
+	margin: 0;
+	padding: 0;
+}
+
+nav a{
+	display: block; /*asegura que las nuevas etiquetas html5(nav) las muestre*/
+	margin-bottom: 10px;
+	padding: 15px 0;
+	text-align: center;
+	text-decoration: none; 
+	font-weight: bold;
+	color: white;
+	background: #E44d26;
+}
+
+/*etiquetas (a) las más usadas, enlace a otro documento o al mismo, cuando se pasa un cursor se pasa la mano*/
+/*cuando ya visitaste el lugar se pone color morado, puedes controlar esa propiedad, aqui en lugar de morado se pondra blanco*/
+nav a:visited{
+	color: white;
+}
+
+/*pasar el cursor por encima nav a:hover*/
+nav a:hover{
+	/*cuando pasas el cursor que se vea una linea por debajo*/
+	text-decoration: underline;
+}
+
+/*puedes tener el mismo selector muchas veces,la propiedad en comun se sobreescribe, 
+	si las propiedades son diferentes las combina*/
+.main{
+	padding: 30px 0;
+}
+/*selecctor anidado, todos los h1 que esten dentro de un articulo, dentro de un main*/
+.main article h1{
+	font-size: 2em;
+}
+.main aside{
+	color:white;
+	padding: 0px 5%;
+}
+
+.footer-container footer{
+	color: white;
+	padding: 20px 0;
+}
+
+/*Ubicar elementos ya sea a la derecha o a la izquierda*/
+.clearfix:before,
+.clearfix:after{
+	content:" ";
+	display:table;
+}
+.clearfix:after{
+	clear:both;
+}
+
+/*monitorear resolucion*/
+/*etilo para pantallas más anchas que 480px*/
+/*lo hacen a traves de la etiqueta meta con su atributo viewport (index)*/
+@media only screen and (min-width: 480px){
+	/*todo el estilo de aqui solo va a funcionar con pantallas mas grandes que de 480*/
+	h1{
+		color: red;
+	}
+	/*nav etiqueta menu, a son los enlaces*/
+	nav a{
+		float: left;
+		width: 27%;
+		margin: 0 1.7%;
+		padding: 25px 2%;
+		margin-bottom: 0;
+	}
+
+	nav li:first-child a{
+		margin-left: 0;
+	}
+	nav li:last-child a{
+		margin-right: 0;
+	}
+	nav ul li{
+		display: inline;
+	}
+
+	td,th{
+		background: green;
+		color: orange;
+		-moz-box-shadow: 7px 7px 5px #000000;
+		-webkit-box-shadow: 7px 7px 5px #000000;
+			box-shadow: 7px 7px 5px #000000;
+	}
+
+}/*min-width: 480px*/
+
+/*Para pantallas mas anchas que 850px*/
+@media only screen and (min-width: 850px){
+	.header-container,
+	.main aside{
+		-moz-box-shadow: 7px 7px 5px #000000;
+		-webkit-box-shadow: 7px 7px 5px #000000;
+			box-shadow: 7px 7px 5px #000000;
+	}
+
+	.title{
+		float: left;
+	}
+
+	nav{
+		float: right;
+		width: 38%;
+	}
+
+	.main article{
+		float: left;
+		width: 57%;
+	}
+
+	.main aside{
+		float: right;
+		width: 28%;
+	}
+
+	td,th{
+		background: blue;
+		color: white;
+	}
+}/*min-width: 850px*/
+
