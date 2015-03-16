@@ -10,6 +10,7 @@ body{
 	margin: 0 5%;
 }
 
+
 table{
 	width: 100%;	/*relativo a su conteneder*/
 }
@@ -51,6 +52,14 @@ nav ul{
 	padding: 0;
 }
 
+h1{
+	font-family: 'Concert One', cursive;
+}
+
+p{
+	font-family: 'Patrick Hand', cursive;
+}
+
 nav a{
 	display: block; /*asegura que las nuevas etiquetas html5(nav) las muestre*/
 	margin-bottom: 10px;
@@ -60,6 +69,7 @@ nav a{
 	font-weight: bold;
 	color: white;
 	background: #E44d26;
+	font-family: 'Covered By Your Grace', cursive;
 }
 
 /*etiquetas (a) las más usadas, enlace a otro documento o al mismo, cuando se pasa un cursor se pasa la mano*/
@@ -173,4 +183,3 @@ nav a:hover{
 		color: white;
 	}
 }/*min-width: 850px*/
-

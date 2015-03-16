@@ -8,54 +8,470 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/miestilo.css">
 
   </head>
   <body>
-    <div class="container text-center">
-
-		<div class="row">	
-	    	<div class="col-md-12">
-	    		<h1>Banner</h1>
-			</div>
-		</div>
-
-		<div class="row">	
-	    	<div class="col-md-12">
-	    		<h1>Menu</h1>
-			</div>
-		</div>
-
-		<div class="row">	
-	    	<div class="col-md-12">
-	    		<h1>Imagenes/presentacion</h1>
-			</div>
-		</div>
-
-		<div class="row">	
-	    	<div class="col-md-8">
-	    		<h1>Noticias</h1>
-			</div>
-
-			<div class="col-md-4">
-	    		<div class="row">
-	    			<h1>Avisos</h1>
-	    		</div>
-	    		<div class="row">
-	    			<h1>Eventos</h1>
-	    		</div>
-			</div>
-		</div>
-
-		<div class="row">	
-	    	<h1>Opciones</h1>
-		</div>
-
-		<div class="row">	
-	    	<h1>Información</h1>
-		</div>		
-    
+  <div class="container text-center" id="ctc">
+    <div class="row-fluid"> 
+        <div class="col-md-12">
+          <img src="img/banner.png" id="banner" width="100%" height="140px">
+      </div>
     </div>
 
+    <div class="row-fluid"  id='menu'>  
+        <div class="col-md-12">
+          <nav class="navbar navbar-default navbar-center" id="navmenu">
+            <div class="container-fluid">
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                  <li><a href="#">INCIO</a></li>
+                  <li><a href="#">NUESTRO INSTITUTO</a></li>
+
+                  <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">OFERTA EDUCATIVA<span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li role="presentation" class="dropdown-header">Licenciaturas</li>
+                    <li><a href="#">Ingeniería Ambiental</a></li>
+                    <li><a href="#">Ingeniería Sistemas Computacionales</a></li>
+                    <li><a href="#">Ingeniería Electronica</a></li>
+                    <li><a href="#">Ingeniería Química</a></li>
+                    <li><a href="#">Ingeniería Mecánica</a></li>
+                    <li class="dropdown-header">Posgrados</li>
+                    <li><a href="#">Maestría en ciencias en ingeniería química</a></li>
+                  </ul>
+                  </li>
+
+                  <li><a href="#">INVESTIGACIÓN</a></li>
+                  <li><a href="#">SII</a></li>
+
+                  <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">CITT<span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">SITIO DEL CITT</a></li>
+                    <li class="dropdown-header">INNOVACIÓN Y DESARROLLO TECNOLOGICO</li>
+                    <li><a href="#">SERVICIO EXTERNO</a></li>
+                    <li><a href="#">CENTRO IDIOMAS</a></li>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+    </div>
+
+    <div class="row-fluid"> 
+        <div class="col-md-12">
+          <img src="img/mxmejor.png" id="banner" width="70%">
+      </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-1" align="center">
+        </div>
+        <div class="col-md-10" align="center">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel" >
+          <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+          <li data-target="#myCarousel" data-slide-to="3"></li>
+          <li data-target="#myCarousel" data-slide-to="4"></li>
+          <li data-target="#myCarousel" data-slide-to="5"></li>
+          <li data-target="#myCarousel" data-slide-to="6"></li>
+          <li data-target="#myCarousel" data-slide-to="7"></li>
+          <li data-target="#myCarousel" data-slide-to="8"></li>
+          <li data-target="#myCarousel" data-slide-to="9"></li>
+          <li data-target="#myCarousel" data-slide-to="10"></li>
+          <li data-target="#myCarousel" data-slide-to="11"></li>
+          </ol>
+
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <img src="img/1.jpg" alt="Chania">
+          </div>
+          <div class="item">
+            <img src="img/2.jpg" alt="Chania">
+          </div>
+          <div class="item">
+            <img src="img/3.jpg" alt="Flower">
+          </div>
+          <div class="item">
+            <img src="img/4.jpg" alt="Flower">
+          </div>
+          <div class="item">
+            <img src="img/5.jpg" alt="Flower">
+          </div>
+          <div class="item">
+            <img src="img/6.jpg" alt="Flower">
+          </div>
+          <div class="item">
+            <img src="img/7.jpg" alt="Flower">
+          </div>
+          <div class="item">
+            <img src="img/8.jpg" alt="Flower">
+          </div>
+          <div class="item">
+            <img src="img/9.jpg" alt="Flower">
+          </div>
+          <div class="item">
+            <img src="img/10.jpg" alt="Flower">
+          </div>
+          <div class="item">
+            <img src="img/11.jpg" alt="Flower">
+          </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+      <div class="row" id='rr'>
+        </div>
+        <div class="row" id='rr'>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" id='rr'>
+      <img src="img/renglon.png" id="banner" width="100%">
+    </div>
+
+    <div class="row"> 
+        <div class="col-md-8">
+          <div>
+            <div class="col-md-4">
+              <img src="img/a1.png" id="a1" width="200px" align="left">
+            </div>
+            <div class="col-md-8">
+              <article>
+              <h4>
+              <a href="http://www.itc.mx" target="_blanck">RENDICIÓN POR PARTE DE LA ESCOLTA Y BANDA DE GUERRA DEL ITC</a>
+              </h4>
+              <p>
+              El día de hoy 12 de Marzo del 2015 en la Explanada Cívica del Instituto Tecnológico de Celaya se realizó la exhibición de banda de Guerra y escolta del Instituto Tecnológico de Celaya para dar a conocer lo sucedido en el XXl Encuentro Nacional de Escoltas y Bandas de Guerra de los Institutos Tecnológicos en el Instituto Tecnológico de Nuevo Laredo.
+              </p>
+              <p>
+                <button id="btn2"><img src="img/leermas.png" width="130px" align="left"></button>
+              </p>
+              <br>
+              <br>
+              <br>
+              </article>
+            </div>
+          </div>
+
+
+          <div>
+            <div class="col-md-4">
+              <img src="img/a2.png" id="a2" width="200px" align="left">
+            </div>
+            <div class="col-md-8">
+              <article>
+              <h4>
+              <a href="http://www.itc.mx" target="_blanck">EVENTO REGIONAL DEL CONSEJO NACIONAL DEL DEPORTE DE LA EDUCACIÓN (CONDDE)</a>
+              </h4>
+              <p>
+              El día 7 de marzo dio inicio el evento regional del Consejo Nacional del Deporte de la Educación (CONDDE) el cual se llevó a cabo en la ciudad de San Luis Potosí, el cual finalizará el día 22 de marzo.
+              </p>
+              <br>
+              <br>
+              <p>
+                <button id="btn2"><img src="img/leermas.png" width="130px" align="left"></button>
+              </p>
+              <br>
+              <br>
+              <br>
+              </article>
+            </div>
+          </div>
+
+          <div>
+            <div class="col-md-4">
+              <img src="img/a3.png" id="a2" width="200px" align="left">
+            </div>
+            <div class="col-md-8">
+              <article>
+              <h4>
+              <a href="http://www.itc.mx" target="_blanck">CONFERENCIA “COMPITIENDO PARA TRABAJAR CON LOS GRANDES, UNA PERSPECTIVA DESDE SILICON VALLEY”</a>
+              </h4>
+              <p>
+              Este 11 de Marzo en punto de las 10:00 am en el Centro Cultural y de Convenciones del Instituto Tecnológico de Celaya se llevó a cabo la conferencia “Compitiendo para trabajar con los GRANDES, una perspectiva desde Silicon Valley” impartida por M.A. Lino Arauz Vera.
+              </p>
+              <p>
+                <button id="btn2"><img src="img/leermas.png" width="130px" align="left"></button>
+              </p>
+              <br>
+              <br>
+              <br>
+              </article>
+            </div>
+          </div>
+
+          <div>
+            <div class="col-md-4">
+              <img src="img/a4.png" id="a2" width="200px" align="left">
+            </div>
+            <div class="col-md-8">
+              <article>
+              <h4>
+              <a href="http://www.itc.mx" target="_blanck">PREMIO NACIONAL AL MÉRITO UNIVERSITARIO 2015</a>
+              </h4>
+              <p>
+              Este viernes 6 de marzo el Mtro. Ignacio López Valdovinos director del Instituto Tecnológico de Celaya, recibió el Premio Nacional al Mérito Universitario 2015 "Pablo César Rodríguez Mendoza" otorgado por el Colegio de Posgraduados en Administración de la República Mexicana A.C.
+              </p>
+              <br>
+              <br>
+              <p>
+                <button id="btn2"><img src="img/leermas.png" width="130px" align="left"></button>
+              </p>
+              <br>
+              <br>
+              <br>
+              </article>
+            </div>
+          </div>
+
+              <br>
+              <br>
+              <p>
+                <button id="btn2"><img src="img/mastecnonoticias.png" width="130px" align="left"></button>
+              </p>
+
+        </div>
+
+        <div class="col-md-4">
+          <div>
+            <img src="img/l1.png" id="banner"width="80%">
+          </div>
+          <div align="left" class="lista_2">
+            <br>
+            <a href="http://www.itc.mx" target="_blanck" id="link">Conferencia, M.A. Lino Arauz Vera</a>
+            <hr>
+          </div>
+          <div align="left" class="lista_2">
+            <a href="http://www.itc.mx" target="_blanck" id="link">RENDICION DE CUENTAS 2014</a>
+            <hr>
+          </div>
+          <div align="left" class="lista_2"> 
+            <a href="http://www.itc.mx" target="_blanck" id="link">Resultados PNPC</a>
+            <hr>
+          </div>
+          <div align="left" class="lista_2">
+            <a href="http://www.itc.mx" target="_blanck" id="link">Programa Mecatrónica</a>
+            <hr>
+          </div>
+          <div align="left" class="lista_2">
+            <a href="http://www.itc.mx" target="_blanck" id="link">Nuevo programa de becas del gobierno holandés</a>
+            <hr>
+          </div>
+          <div align="left" class="lista_2">
+            <a href="http://www.itc.mx" target="_blanck" id="link">10 años de la carrera de Ingeniería Mecatrónica</a>
+            <hr>
+          </div>
+          <div align="left" class="lista_2">
+            <a href="http://www.itc.mx" target="_blanck" id="link">Apartado "Solicitar cubrir eventos"</a>
+            <hr>
+          </div>
+          <div align="left" class="lista_2">
+            <a href="http://www.itc.mx" target="_blanck" id="link">Procedimiento para baja de materias</a>
+            <hr>
+          </div>
+
+          <br>
+          <br>
+          <div>
+            <img src="img/linea.png" id="banner"width="80%">
+          </div>
+
+          <br>
+
+          <div>
+            <img src="img/l2.png" id="banner"width="80%">
+          </div>
+          <div class="row" align="left">
+            <br>
+            <div class="col-md-3">
+            <img src="img/f1.png" id="banner" width="100px">
+            </div>
+            <div class="col-md-9">
+            <h5>
+            <a href="http://www.itc.mx" target="_blanck" id="link2">CONVOCATORIA "PROGRAMA SEMBRANDO LA 
+            INNOVACIÓN"</a>
+            </h5>
+            </div>
+          </div>
+          <br>
+          <div class="row" align="left">
+            <br>
+            <div class="col-md-3">
+            <img src="img/f2.png" id="banner" width="100px">
+            </div>
+            <div class="col-md-9">
+            <h5>
+            <a href="http://www.itc.mx" target="_blanck" id="link2">EVENTOS ING. AMBIENTAL DENTRO DEL 10. ANIVERSARIO</a>
+            </h5>
+            </div>
+          </div>
+          <br>
+          <div class="row" align="left">
+            <br>
+            <div class="col-md-3">
+            <img src="img/f1.png" id="banner" width="100px">
+            </div>
+            <div class="col-md-9">
+            <h5>
+            <a href="http://www.itc.mx" target="_blanck" id="link2">XXIICONCURSO NACIONAL DE CIENCIAS BASICAS</a>
+            </h5>
+            </div>
+          </div>
+          <br>
+          <br>
+          <p>
+            <button id="btn2"><img src="img/maseventos.png" width="130px" align="left"></button>
+          </p>
+        </div>
+        <br>
+        <br>
+        <div class="row" id='rr'>
+          <img src="img/renglon.png" id="banner" width="100%">
+        </div>
+        <br>
+    </div>
+
+    <div class="row"> 
+    <div class="carousel slide">
+      <div class="well">
+          <div id="myCarousel2" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="item active">
+                <div class="row">
+                  <div class="col-sm-2">
+                    <a href="http://www.itc.mx"><img src="img/i1.jpg" alt="Image" class="img-responsive"></a>
+                    <div>
+                      <p>
+                        <a href="http://www.itc.mx" id="linkslide">Calendario Escolar</a>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-sm-2">
+                    <a href="http://www.itc.mx"><img src="img/i2.jpg" alt="Image" class="img-responsive"></a>
+                    <div>
+                      <p>
+                        <a href="http://www.itc.mx" id="linkslide">Admisiones</a>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-sm-2">
+                    <a href="http://www.itc.mx"><img src="img/i3.jpg" alt="Image" class="img-responsive"></a>
+                    <div>
+                      <p>
+                        <a href="http://www.itc.mx" id="linkslide">Video Promocional</a>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-sm-2">
+                    <a href="http://www.itc.mx"><img src="img/i4.png" alt="Image" class="img-responsive"></a>
+                    <div>
+                      <p>
+                        <a href="http://www.itc.mx" id="linkslide">Profesores</a>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-sm-2">
+                    <a href="http://www.itc.mx"><img src="img/i5.png" alt="Image" class="img-responsive"></a>
+                    <div>
+                      <p>
+                        <a href="http://www.itc.mx" id="linkslide">Alumnos</a>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-sm-2">
+                    <a href="http://www.itc.mx"><img src="img/i6.png" alt="Image" class="img-responsive"></a>
+                    <div>
+                      <p>
+                        <a href="http://www.itc.mx" id="linkslide">Radio tecnólogico</a>
+                      </p>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+                
+                <div class="item">
+                    <div class="row">
+                        <div class="col-sm-2">
+                          <a href="http://www.itc.mx"><img src="img/i7.png" alt="Image" class="img-responsive"></a>
+                          <div>
+                          <p>
+                            <a href="http://www.itc.mx" id="linkslide">Centro Idiomas</a>
+                          </p>
+                          </div>
+                        </div>
+                        <div class="col-sm-2">
+                          <a href="http://www.itc.mx"><img src="img/i8.png" alt="Image" class="img-responsive"></a>
+                          <div>
+                          <p>
+                            <a href="http://www.itc.mx" id="linkslide">Centro Información</a>
+                          </p>
+                          </div>
+                        </div>
+                        <div class="col-sm-2">
+                          <a href="http://www.itc.mx"><img src="img/i9.png" alt="Image" class="img-responsive"></a>
+                          <div>
+                          <p>
+                            <a href="http://www.itc.mx" id="linkslide">Acceso a Medios de Verificación PNPC-CONACYT</a>
+                          </p>
+                          </div>
+                        </div>
+                        <div class="col-sm-2">
+                          <a href="http://www.itc.mx"><img src="img/i10.png" alt="Image" class="img-responsive"></a>
+                          <div>
+                          <p>
+                            <a href="http://www.itc.mx" id="linkslide">Centro de computo</a>
+                          </p>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+                <a class="left carousel-control" href="#myCarousel2" role="button" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel2" role="button" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+            <!--/myCarousel2-->
+          </div>
+      </div>
+
+      <br><br><br><br>
+      <ol class="carousel-indicators">
+      <li data-target="#myCarousel2" data-slide-to="0" class="active" id="punto"></li>
+      <li data-target="#myCarousel2" data-slide-to="1" id="punto"></li>
+      </ol>
+      
+    </div>
+    </div>
+
+    
+    
+    <div class="row"> 
+      <img src="img/info.png" id="banner"width="100%">
+    </div>    
+    
+  </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
   </body>
 </html>
