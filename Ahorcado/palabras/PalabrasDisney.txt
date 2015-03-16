@@ -1,0 +1,22 @@
+Palabras predeterminadas para Disney:
+
+-frozen
+-princesa
+-mickey
+-enredados
+-walt
+-disneyland
+-cenicienta
+-blancanieves
+-nemo
+-elsa
+-ana
+-woody
+-buzz
+-tarzan
+-pocahontas
+-minnie
+-aurora
+-malefica
+-dory
+-principe

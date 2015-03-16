@@ -1,0 +1,22 @@
+Palabras predeterminadas para Peliculas y Series:
+
+-friends
+-glee
+-bones
+-csi
+-revenge
+-lost
+-house
+-homeland
+-heroes
+-nashville
+-dexter
+-supernatural
+-arrow
+-malefica
+-transformers
+-godzilla
+-divergente
+-noe
+-her
+-xmen

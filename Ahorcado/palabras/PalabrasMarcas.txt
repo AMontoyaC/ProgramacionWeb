@@ -1,0 +1,22 @@
+Palabras predeterminadas para Marcas:
+
+-apple
+-android
+-xbox
+-samsung
+-gap
+-mattel
+-levis
+-kellogs
+-huggies
+-pepsi
+-heinz
+-target
+-adidas
+-nike
+-puma
+-pringles
+-sabritas
+-dell
+-whatsapp
+-nutella

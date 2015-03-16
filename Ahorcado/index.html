@@ -1,0 +1,158 @@
+	<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ahorcado</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/miestilo.css">
+
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/funciones.js"></script>
+    
+  </head>
+  <body>
+    <div class="main-container">
+        <div class="col-md-12" align="center">
+            <img src="img/gif1.gif" id="gif1" align="center">
+            <br>
+            <img src="img/entrar.gif" id="entrar" align="center" height="90%">
+            <br>
+            <img src="img/icono.png" id="icono" align="center">
+            <br>
+            <img src="img/titulo.png" id="titulo" align="center">
+        </div>
+
+        <!-- MENU -->
+        <div class="row" align="center">
+            <div class="col-md-3"></div>
+            <div class="col-md-6" id="menu" align="center">
+                <img src="img/btn1jug.png" id="btn1jug" align="center" height="100px">
+                <br>
+                <img src="img/btn2jug.png" id="btn2jug" align="center" height="100px">
+                <br>
+                <img src="img/btnopc.png" id="btnopc" align="center" height="100px">
+                <br>
+                <img src="img/btnayuda.png" id="btnayuda" align="center" height="100px">
+                <br>
+                <img src="img/btncreditos.png" id="btncreditos" align="center" height="100px">
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+
+        <!-- MANDA CUANDO DA BOTON AYUDA -->
+        <div class="row" align="center" id="ayuda">
+            <div class="row">
+                <div class="col-md-10"></div>
+                <div class="col-md-2">
+                    <img src="img/menu.png" id="ayuda_menu" align="center" width="100px" height="100px">
+                    <br>
+                </div>    
+            </div>
+
+            <img src="img/btnayuda.png" id="lblayuda" align="center">
+            <br>
+            <div class="col-md-2" align="center"></div>
+            <div class="col-md-8" align="center" id="reglas">
+            <p>
+                <br><br>
+                1 Jugador <br>
+                Selecciona una categoría y juega al ahorcado con una palabra seleccionada al azar referente a tu selección.
+                <br><br>
+                Adivina las letras y completa la palabra.
+                Inicias con una puntuación de 200, por cada letra atinada subes 10 puntos. Si eliges una palabra que no se encuentra te iras ahorcando y tu puntaje disminuirá 20 puntos, pierdes una vez que te ahorques.
+                <br><br>
+            </p>
+            <br>
+            <p>
+                2 Jugadores<br>
+                En este modo de juego de dos personas pueden jugar con la misma página.
+                Primero un jugador escribirá su palabra que sea menor de 36 letras, para que el otro jugador pueda adivinarla. Una vez terminado se invertirán los roles.
+            </p>
+            </div>
+        </div>
+
+        <!-- CREDITOS -->
+        <div class="row" id="creditos" align="center">
+            <div class="row">
+                <div class="col-md-10"></div>
+                <div class="col-md-2">
+                    <img src="img/menu.png" id="creditos_menu" align="center" width="100px" height="100px">
+                    <br>
+                </div>    
+            </div>
+            <div class="col-md-2" align="center"></div>
+            <div class="col-md-8" align="center">
+                <p>
+                    Elaborado por:<br>
+                    <p id="p1">
+                        Andrea Montoya
+                    </p>
+                </p>
+                <img src="img/gif2.gif" id="gif2" align="center">
+            </div>
+        </div>
+
+         <!-- Opciones -->
+        <div class="row" id="opciones" align="center">
+            <div class="row">
+                <div class="col-md-10"></div>
+                <div class="col-md-2">
+                    <img src="img/menu.png" id="opciones_menu" align="center" width="100px" height="100px">
+                    <br><br>
+                </div>    
+            </div>
+            <div class="col-md-3"></div>
+            <div class="col-md-6" id="menu" align="center">
+                <img src="img/btnagrpalabras.png" id="btnagrpalabras" align="center" height="100px">
+                <br>
+                <br>
+                <br>
+                <br>
+                <img src="img/btncamicono.png" id="btncamicono" align="center" height="100px">
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+
+         <!-- CAMBIAR ICONO -->
+        <div class="row" id="cambiaricono" align="center">
+            <div class="row">
+                <div class="col-md-10"></div>
+                <div class="col-md-2">
+                    <img src="img/menu.png" id="camicono_menu" align="center" width="100px" height="100px">
+                    <br><br>
+                </div>    
+            </div>
+            <div class="row">
+                <div class="col-md-2" align="center"></div>
+                <div class="col-md-8" align="center">
+                    <p>
+                        Elige el icono que desees<br>
+                    </p>
+                </div>
+            </div>
+            <br><br><br>
+            <div class="row">
+                <div class="col-md-2"><img src="img/icono1.png" id="i1" align="center" width="100px" height="100px"></div>
+                <div class="col-md-2"><img src="img/icono2.png" id="i2" align="center" width="100px" height="100px"></div>
+                <div class="col-md-2"><img src="img/icono3.png" id="i3" align="center" width="100px" height="100px"></div>
+                <div class="col-md-2"><img src="img/icono4.png" id="i4" align="center" width="100px" height="100px"></div>
+                <div class="col-md-2"><img src="img/icono5.png" id="i5" align="center" width="100px" height="100px"></div>
+                <div class="col-md-2"><img src="img/icono6.png" id="i6" align="center" width="100px" height="100px"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-2"><img src="img/icono7.png" id="i7" align="center" width="100px" height="100px"></div>
+                <div class="col-md-2"><img src="img/icono8.png" id="i8" align="center" width="100px" height="100px"></div>
+                <div class="col-md-2"><img src="img/icono9.png" id="i9" align="center" width="100px" height="100px"></div>
+                <div class="col-md-2"><img src="img/icono10.png" id="i10" align="center" width="100px" height="100px"></div>
+                <div class="col-md-2"><img src="img/icono11.png" id="i11" align="center" width="100px" height="100px"></div>
+                <div class="col-md-2"><img src="img/icono12.png" id="i12" align="center" width="100px" height="100px"></div>
+            </div>
+        </div>
+    </div>
+  </body>
+ </html> 
+
+ <!-- -->

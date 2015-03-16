@@ -1,0 +1,22 @@
+Palabras predeterminadas para Musica:
+
+-yellow
+-sing
+-cantante
+-banda
+-pompeii
+-bastille
+-coldplay
+-pop
+-rock
+-clasica
+-concierto
+-shakira
+-muse
+-haim
+-onerepublic
+-latch
+-summer
+-alive
+-queen
+-magic

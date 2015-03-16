@@ -1,0 +1,22 @@
+Palabras predeterminadas para Personajes:
+
+-thor
+-ironman
+-batman
+-superman
+-bumblebee
+-hulk
+-gatubela
+-spiderman
+-pinocho
+-olaf
+-homero
+-rapunzel
+-Sulley
+-bart
+-daisy
+-piolin
+-goofy
+-donald
+-shrek
+-wolverine

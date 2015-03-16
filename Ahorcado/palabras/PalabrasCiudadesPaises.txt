@@ -1,0 +1,22 @@
+Palabras predeterminadas para Ciudades Y Paises:
+
+-Mexico
+-Celaya
+-Berlin
+-Londres
+-Belgica
+-Dublin
+-Texas
+-Paris
+-Brasil
+-Guanajuato
+-Irlanda
+-China
+-Dubai
+-Inglaterra
+-Rusia
+-Alemania
+-Francia
+-Argentina
+-Croacia
+-Ecuador

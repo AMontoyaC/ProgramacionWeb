@@ -1,0 +1,23 @@
+#titulo{
+	color: white;
+	font-family: 'Franklin Gothic Demi Cond', Courier, monospace
+}
+
+.header-container{
+	background: #339900;
+	-webkit-box-shadow: 5px 5px 5px 0px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    5px 5px 5px 0px rgba(50, 50, 50, 0.75);
+	box-shadow:         5px 5px 5px 0px rgba(50, 50, 50, 0.75);
+}
+
+.container{
+	width: 90%;
+	margin: 0 5%;
+}
+
+.footer-container{ 
+	border-top: 20px solid #339900;
+	-webkit-box-shadow: -5px -5px 5px 0px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    -5px -5px 5px 0px rgba(50, 50, 50, 0.75);
+	box-shadow:         -5px -5px 5px 0px rgba(50, 50, 50, 0.75);
+}

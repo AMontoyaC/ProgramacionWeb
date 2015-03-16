@@ -1,0 +1,48 @@
+label {
+	color: white;
+	text-align: left;
+	font-family: Arial;
+}
+
+#img1{
+	-webkit-border-radius: 5px 10px;  /* Safari  */
+  -moz-border-radius: 5px 10px;     /* Firefox */
+}
+
+
+.container{
+	background-image: url("../img/fondo.jpg");
+	width: 100%;
+	border-top: 10px ridge #696969;
+}
+
+#linkitc{
+	color: white;
+	text-align: left;
+}
+
+#fc{
+	background-color: black;
+
+}
+
+#btn1,#btn2,#btn3,#btn4,#btn5{
+	background-color: transparent;
+	border:none;
+}
+
+#linkitc{
+	font-size: 20px;
+	text-decoration: underline;
+	color: blue;
+}
+
+#foto{
+    width: auto;
+    margin-left: 170px;
+}
+
+#fc{
+	background-color: black;
+	border-top: 10px ridge #696969;
+}

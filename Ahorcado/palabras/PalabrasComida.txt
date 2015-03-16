@@ -1,0 +1,22 @@
+Palabras predeterminadas para Comida:
+
+-hamburguesa
+-papas
+-tacos
+-torta
+-pozole
+-sopa
+-gelatina
+-pollo
+-carne
+-jamon
+-salchicha
+-pizza
+-sushi
+-helado
+-queso
+-cereal
+-huevo
+-ensalada
+-arroz
+-galleta

@@ -1,0 +1,22 @@
+Palabras predeterminadas para Deportes:
+
+-futbol
+-basquetbol
+-tenis
+-atletismo
+-hockey
+-americano
+-golf
+-natacion
+-beisbol
+-ciclismo
+-equitacion
+-handball
+-box
+-esgrima
+-gimnasia
+-taekwondo
+-voleibol
+-lucha
+-triatlon
+-waterpolo
