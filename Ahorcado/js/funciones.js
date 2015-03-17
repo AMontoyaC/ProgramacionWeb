@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-	var rutaicono="img/icono1.png";
+	var rutaicono;
 	
 	//2jugadores
 	var pal1;
@@ -20,6 +20,8 @@ $(document).ready(function(){
 	$('#cambiaricono').hide();
 	$('#2jugadores').hide();
 	$('#agregarpalabra').hide();
+	$('#categorias').hide();
+	$('#t1jug').hide();
 
 	document.body.style.backgroundColor = "#FFFFFF";
 	$('#entrar').click(function(){
@@ -133,7 +135,82 @@ $(document).ready(function(){
    		}
    		else{
    			agregar_palabra(categoria,ncategoria,palabra);
+   			$('#menu').show();
+			$('#agregarpalabra').hide();
    		}
+	});
+
+
+	$('#btn1jug').click(function(){
+		$('#menu').hide();
+		$('#categorias').show();
+	});
+
+	$('#cat_menu').click(function(){
+		$('#menu').show();
+		$('#categorias').hide();
+	});
+
+	$('#t1jug_menu').click(function(){
+		$('#menu').show();
+		$('#t1jug').hide();
+	});
+
+	//imagen categorias click
+	$('#ic1').click(function(){
+		$('#categorias').hide();
+		$('#t1jugicono').attr('src',rutaicono);
+		$('#t1jug').show();
+		elegir_palabra("paisesyciudades","npaisesyciudades");
+	});
+
+	$('#ic2').click(function(){
+		$('#categorias').hide();
+		$('#t1jugicono').attr('src',rutaicono);
+		$('#t1jug').show();
+		elegir_palabra("comida","ncomida");
+	});
+
+	$('#ic3').click(function(){
+		$('#categorias').hide();
+		$('#t1jugicono').attr('src',rutaicono);
+		$('#t1jug').show();
+		elegir_palabra("deportes","ndeportes");
+	});
+
+	$('#ic4').click(function(){
+		$('#categorias').hide();
+		$('#t1jugicono').attr('src',rutaicono);
+		$('#t1jug').show();
+		elegir_palabra("disney","ndisney");
+	});
+
+	$('#ic5').click(function(){
+		$('#categorias').hide();
+		$('#t1jugicono').attr('src',rutaicono);
+		$('#t1jug').show();
+		elegir_palabra("marcas","nmarcas");
+	});
+
+	$('#ic6').click(function(){
+		$('#categorias').hide();
+		$('#t1jugicono').attr('src',rutaicono);
+		$('#t1jug').show();
+		elegir_palabra("musica","nmusica");
+	});
+
+	$('#ic7').click(function(){
+		$('#categorias').hide();
+		$('#t1jugicono').attr('src',rutaicono);
+		$('#t1jug').show();
+		elegir_palabra("peliculasyseries","npeliculasyseries");
+	});
+
+	$('#ic8').click(function(){
+		$('#categorias').hide();
+		$('#t1jugicono').attr('src',rutaicono);
+		$('#t1jug').show();
+		elegir_palabra("personajes","npersonajes");
 	});
 
 
@@ -293,6 +370,42 @@ function agregar_palabra(c,nc,p){
 		npersonajes++;
 		//alert(personajes.join('\n'));
 	}
+}
 
+function elegir_palabra(c,nc){
+	var num;
+	var p;
 
+	if(c=="paisesyciudades"){
+		num=Math.round((Math.random()*npaisesyciudades)+1);
+		p=paisesyciudades[num];
+	}
+	if(c=="comida"){
+		num=Math.round((Math.random()*ncomida)+1);
+		p=comida[num];
+	}
+	if(c=="deportes"){
+		num=Math.round((Math.random()*ndeportes)+1);
+		p=deportes[num];
+	}
+	if(c=="disney"){
+		num=Math.round((Math.random()*ndisney)+1);
+		p=disney[num];
+	}
+	if(c=="marcas"){
+		num=Math.round((Math.random()*nmarcas)+1);
+		p=marcas[num];
+	}
+	if(c=="musica"){
+		num=Math.round((Math.random()*nmusica)+1);
+		p=musica[num];
+	}
+	if(c=="peliculasyseries"){
+		num=Math.round((Math.random()*npeliculasyseries)+1);
+		p=peliculasyseries[num];
+	}
+	if(c=="personajes"){
+		num=Math.round((Math.random()*npersonajes)+1);
+		p=personajes[num];
+	}
 }

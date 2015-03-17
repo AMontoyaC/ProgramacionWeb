@@ -5,6 +5,10 @@ p{
 	font-size: 40px;
 }
 
+#cat_menu,#t1jug_menu{
+	padding-left: 20px;
+}
+
 #p1{
 	font-family: 'Chelsea Market', cursive;
 	text-align: justify;
@@ -27,6 +31,20 @@ button{
 	background-color: transparent;
 	border:none;
 	font-size: 80px;
+}
+
+#c1,#c2,#c3,#c4,#c5,#c6,#c7,#c8{
+	font-size: 30px;
+	text-align: center;
+	padding-left: 50px;
+}
+
+#ic1,#ic2,#ic3,#ic4,#ic5,#ic6,#ic7,#ic8{
+	padding-left: 50px;
+}
+
+#idpuntos{
+	text-align: center;
 }
 
 @media only screen and (max-width: 480px){
