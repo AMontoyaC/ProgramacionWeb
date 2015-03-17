@@ -1,7 +1,19 @@
+body{
+	background-color: black;
+}
+
 label {
 	color: white;
 	text-align: left;
 	font-family: Arial;
+}
+
+p{
+	color: white;
+	text-align: left;
+	font-family: Arial;
+	font-size: 15px;
+	padding-left: 10px;
 }
 
 #img1{
@@ -26,7 +38,7 @@ label {
 
 }
 
-#btn1,#btn2,#btn3,#btn4,#btn5{
+#btn1,#btn2,#btn3,#btn4,#btn5,#guardardatos{
 	background-color: transparent;
 	border:none;
 }

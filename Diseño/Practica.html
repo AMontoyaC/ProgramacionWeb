@@ -9,7 +9,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/miestilo.css">
     <script src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/funcionesP5.js"></script>
+    <script type="text/javascript" src="js/funciones.js"></script>
     
   </head>
   <body>
@@ -17,11 +17,60 @@
       <div class="row">
         <!-- logo tec -->
         <div class="col-md-6" id="div1" align="center">
-            <img src="img/logo1.png" width="500px" id="img1">
+            <img src="img/logo1.png" width="500px" id="imgcentral">
+
+            <!-- horario entrada -->
+            <div class="row" id="horarioentrada" align="center">
+              <p>lunes, 12 de enero de 2015 09:40:00<br><br><br>
+                  Nota: Para la generación de la orden de entrada no se contempla actividades extraescolares ni complementarias (ej. Tutorías).
+              </p>
+            </div>
+
+            <!-- inscripciones -->
+            <div class="row" id="inscripciones" align="center">
+              <p>NO Disponibles
+              </p>
+            </div>
+
+            <!-- instrumentacion didactica -->
+            <div class="row" id="instrumentacion" align="center">
+              <p>NO Disponibles
+              </p>
+            </div>
+
+            <!-- carga academica -->
+            <div class="row" id="carga" align="center">
+              <img src="img/cargaacademica.png" width="500px" id="cargaacademica">
+            </div>
+
+             <!-- actualizar datos -->
+            <div class="row" id="actdatos" align="center">
+            <form id="actz">
+              <div class="form-group">
+                <label class="col-sm-2 control-label" text-align="left">
+                      Nombre: </label>
+                <input id="inombre" class="col-sm-10"></input><br><br>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label" text-align="left">
+                      Especialidad:</label>
+                <input id="iespecialidad" class="col-sm-10" ></input><br><br>
+              </div>
+              <div class="form-group">
+                <label  class="col-sm-2 control-label">Semestre: </label>
+                <input id="inumsemestre" class="col-sm-10"></input><br><br>
+              </div>
+              <div class="form-group">
+                <label  class="col-sm-2 control-label">No. control:</label>
+                <input id="inocontrol" class="col-sm-10"></input><br><br>
+              </div>
+            </form>
+              <button id="guardardatos"><img src="img/guardar.png" width="50px" height="50px" ></button>
+            </div>
         </div>
 
         <!-- info alumno -->
-        <div class="col-md-6">
+        <div class="col-md-6" id="info">
           <img src="img/f.jpg" width="200px" id="img1">
 
           <div align="center">
@@ -29,9 +78,11 @@
           </div> 
 
           <label class="col-sm-10 control-label" text-align="left">
-              Especialidad: INGENIERÍA EN SISTEMAS COMPUTACIONALES</label>  
-          <label  class="col-sm-10 control-label">Semestre: 6</label> 
-          <label  class="col-sm-10 control-label">No. control: 12030854</label> 
+              Nombre: <label id="nombre">Cleopatra Martinez</label></label>
+          <label class="col-sm-10 control-label" text-align="left">
+              Especialidad: <label id="especialidad">INGENIERÍA EN SISTEMAS COMPUTACIONALES</label></label>
+          <label  class="col-sm-10 control-label">Semestre: <label id="numsemestre">6</label></label> 
+          <label  class="col-sm-10 control-label">No. control: <label id="nocontrol">12030854</label></label>
           <label  class="col-sm-10 control-label">Créditos acumulados: 138</label> 
           <label  class="col-sm-10 control-label">Inscrito: Si</label> 
           <label  class="col-sm-10 control-label">Estatus: VI - VIGENTE  </label> 
@@ -56,6 +107,8 @@
           </div>
       </div>
     </div>
+
+   
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   </body>

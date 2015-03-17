@@ -152,12 +152,58 @@
             </div>
         </div>
 
-         <!-- Agregar Palabra-->
+        <!-- Agregar Palabra-->
+        <div class="row" id="agregarpalabra">
+            <div class="row">
+                <div class="col-md-10"></div>
+                <div class="col-md-2">
+                    <img src="img/menu.png" id="agrpalabra_menu" align="center" width="100px" height="100px">
+                    <br><br>
+                </div>    
+            </div>
+
+            <form name="agrpalabra">
+                <div class="form-group">
+                    <label for="cat">  Selecciona Categoria </label>
+                    <div class="col-sm-10">
+                        <select class="form-control" name="categoria" id="categoria">
+                        <option>Ciudades y Paises</option>
+                        <option>Comida</option>
+                        <option>Deportes</option>
+                        <option>Disney</option>
+                        <option>Marcas</option>
+                        <option>Música</option>
+                        <option>Peliculas y Series</option>
+                        <option>Personajes</option>
+                    </select>   
+                    </div>
+                </div>
+                <br><br><br><br>
+                <div class="form-group">
+                    <label for="palabra">  Ingresa Palabra</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static"><input class="form-control" type="text" name="palabra" id="palabra"></p>
+                    </div>
+                </div>
+                <br><br><br><br>
+            </form>
+            <div class="form-group" align="center"> 
+                <button id="listo2">Listo!</button>
+            </div>
+        </div>
+
+         <!-- Categorias-->
 
 
         <!-- 2 Jugadores -->
         <!-- form 1 jugador -->
         <div class="row" id="2jugadores">
+            <div class="row">
+                <div class="col-md-2">
+                    <img src="img/menu.png" id="formjug1_menu" align="center" width="150px" height="100px">
+                    <br><br>
+                </div>    
+            </div>
             <form name="jug1">
                 <div class="form-group">
                     <label for="nomjug1">  Ingresa tu nombre</label>
@@ -176,7 +222,6 @@
             </form>
             <div class="form-group" align="center">
                 <button id="listo1">Listo!</button>
-            </div>
             </div>
         </div>
     </div>

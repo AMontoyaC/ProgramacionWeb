@@ -1,12 +1,15 @@
 $(document).ready(function(){
 
 	var rutaicono="img/icono1.png";
-
+	
 	//2jugadores
 	var pal1;
 	var jug1;
 	var pal2;
 	var jug2;
+	var b=0;
+
+
 
 	$('#icono').hide();
 	$('#titulo').hide();
@@ -16,6 +19,7 @@ $(document).ready(function(){
 	$('#opciones').hide();
 	$('#cambiaricono').hide();
 	$('#2jugadores').hide();
+	$('#agregarpalabra').hide();
 
 	document.body.style.backgroundColor = "#FFFFFF";
 	$('#entrar').click(function(){
@@ -77,6 +81,11 @@ $(document).ready(function(){
 		$('#2jugadores').show();
 	});
 
+	$('#formjug1_menu').click(function(){
+		$('#menu').show();
+		$('#2jugadores').hide();
+	});
+
 	$('#listo1').click(function(){
 		pal1 = document.jug1.pal1.value;
 		jug1 = document.jug1.nomjug1.value;
@@ -84,15 +93,50 @@ $(document).ready(function(){
 		if(pal1.length>10){
 			$('#icono').hide();
 			$('#titulo').hide();
-			$('#2jugadores').hide();
+			$('#menu').hide();
 			alert("Palabra mayor a 10 caracteres");
-			$('#menu').show();
+			document.jug1.pal1.value="";
 		}
 		else{
-			alert("all good");
+   			var v=tiene_numeros(pal1);
+
+   			if(v==1){
+   				alert("Tiene caracteres especiales");
+   				document.jug1.pal1.value="";
+   			}
+   			else{
+   				alert("ALL GOOD");
+   			}
 		}
-		 
 	});
+
+	$('#btnagrpalabras').click(function(){
+		$('#opciones').hide();
+		$('#agregarpalabra').show();
+	});
+
+	$('#agrpalabra_menu').click(function(){
+		$('#menu').show();
+		$('#agregarpalabra').hide();
+	});
+
+	$('#listo2').click(function(){
+		var palabra = document.agrpalabra.palabra.value;
+		var categoria = document.agrpalabra.categoria.value;
+		var ncategoria="n"+categoria;
+
+		var v=tiene_numeros(palabra);
+
+   		if(v==1){
+   			alert("Tiene caracteres especiales");
+   			document.agrpalabra.palabra.value="";
+   		}
+   		else{
+   			//agregarpalabra(categoria,ncategoria,palabra);
+   			alert("all good");
+   		}
+	});
+
 
 	//depende click icono guardar su ruta
 	$('#i1').click(function(){
@@ -156,3 +200,61 @@ $(document).ready(function(){
 		$('#cambiaricono').hide();
 	});
 });
+
+
+var numeros="0123456789|°¬!#$%&/()=?'+*~´¨{[^}]`-_:.;,";
+
+function tiene_numeros(texto){
+   for(i=0; i<texto.length; i++){
+      if (numeros.indexOf(texto.charAt(i),0)!=-1){
+         return 1;
+      }
+   }
+   return 0;
+}
+
+var npaisesyciudades=20;
+var ncomida=20;
+var ndeportes=20;
+var ndisney=20;
+var nmarcas=20;
+var nmusica=20;
+var npeliculasyseries=20;
+var npersonajes=20;
+
+var paisesyciudades = ["Mexico","Celaya","Berlin","Londres","Belgica","Dublin","Texas","Paris"
+				,"Brasil","Guanajuato","Irlanda","China","Dubai","Inglaterra","Rusia"
+				,"Alemania","Francia","Argentina","Croacia","Ecuador"];
+
+var comida = ["hamburguesa","papas","tacos","torta","pozole","sopa","gelatina","pollo","carne"
+				,"jamon","salchicha","pizza","sushi","helado","queso","cereal","huevo","ensalada","arroz","galleta"];
+
+var deportes = ["futbol","basquetbol","tenis","atletismo","hockey","americano","golf","natacion"
+				,"beisbol","ciclismo","equitacion","handball","box","esgrima","gimnasia","taekwondo"
+				,"voleibol","lucha","triatlon","waterpolo"];
+
+var disney = ["frozen","princesa","mickey","enredados","walt","disneyland","cenicienta","blancanieves"
+				,"nemo","elsa","ana","woody","buzz","tarzan","pocahontas","minnie","aurora","malefica"
+				,"dory","principe"];
+
+var marcas = ["apple","android","xbox","samsung","gap","mattel","levis","kellogs","huggies","pepsi"
+				,"heinz","target","adidas","nike","puma","pringles","sabritas","dell","whatsapp","nutella"];
+
+var musica = ["yellow","sing","cantante","banda","pompeii","bastille","coldplay","pop","rock"
+				,"clasica","concierto","shakira","guitarra","haim","onerepublic","bateria"
+				,"summer","alive","queen","bajo"];				
+
+var peliculasyseries = ["friends","glee","bones","csi","revenge","lost","house","homeland"
+						,"heroes","nashville","dexter","supernatural","arrow","malefica"
+						,"transformers","godzilla","divergente","noe","her","xmen"];				
+
+var personajes = ["thor","ironman","batman","superman","bumblebee","hulk","gatubela","spiderman"
+					,"pinocho","olaf","homero","rapunzel","Sulley","bart","daisy","piolin"
+					,"goofy","donald","shrek","wolverine"];
+
+
+function agregar_palabra(categoria,ncategoria,palabra){
+	categoria.push(palabra);
+	ncategoria++;
+	alert(categoria[ncategoria]);
+}
