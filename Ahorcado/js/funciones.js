@@ -132,8 +132,7 @@ $(document).ready(function(){
    			document.agrpalabra.palabra.value="";
    		}
    		else{
-   			//agregarpalabra(categoria,ncategoria,palabra);
-   			alert("all good");
+   			agregar_palabra(categoria,ncategoria,palabra);
    		}
 	});
 
@@ -253,8 +252,47 @@ var personajes = ["thor","ironman","batman","superman","bumblebee","hulk","gatub
 					,"goofy","donald","shrek","wolverine"];
 
 
-function agregar_palabra(categoria,ncategoria,palabra){
-	categoria.push(palabra);
-	ncategoria++;
-	alert(categoria[ncategoria]);
+function agregar_palabra(c,nc,p){
+	if(c=="paisesyciudades"){
+		paisesyciudades.push(p);
+		npaisesyciudades++;
+		//alert(paisesyciudades.join('\n'));
+	}
+	if(c=="comida"){
+		comida.push(p);
+		ncomida++;
+		//alert(comida.join('\n'));
+	}
+	if(c=="deportes"){
+		deportes.push(p);
+		ndeportes++;
+		//alert(deportes.join('\n'));
+	}
+	if(c=="disney"){
+		disney.push(p);
+		ndisney++;
+		//alert(disney.join('\n'));
+	}
+	if(c=="marcas"){
+		marcas.push(p);
+		nmarcas++;
+		//alert(marcas.join('\n'));
+	}
+	if(c=="musica"){
+		musica.push(p);
+		nmusica++;
+		//alert(musica.join('\n'));
+	}
+	if(c=="peliculasyseries"){
+		peliculasyseries.push(p);
+		npeliculasyseries++;
+		//alert(peliculasyseries.join('\n'));
+	}
+	if(c=="personajes"){
+		personajes.push(p);
+		npersonajes++;
+		//alert(personajes.join('\n'));
+	}
+
+
 }
