@@ -5,8 +5,12 @@ p{
 	font-size: 40px;
 }
 
-#cat_menu,#t1jug_menu{
+#cat_menu{
 	padding-left: 20px;
+}
+
+#t1jug_menu{
+	padding-left: 30px;
 }
 
 #p1{
@@ -45,6 +49,50 @@ button{
 
 #idpuntos{
 	text-align: center;
+}
+
+#t1jugicono{
+	position: absolute;
+	top:10px;
+}
+
+#t1jugcuerpo{
+	position: absolute;
+	top:90px;
+	left: 55px;
+}
+
+#t1jugbizq{
+	position: absolute;
+	top:120px;
+	margin-left:13px;
+}
+
+#t1jugbder{
+	position: absolute;
+	top:120px;
+	left:60px;
+}
+
+#t1jugpizq{
+	position: absolute;
+	top:280px;
+	margin-left:15px;
+}
+
+#t1jugpder{
+	position: absolute;
+	top:280px;
+	left:60px;
+}
+
+#la,#lb,#lc,#ld,#le,#lf,#lg,#lh,#li,#lj,#lk,#ll,#lm,#ln,#lo,#lp,#lq
+,#lr,#ls,#lt,#lu,#lv,#lw,#lx,#ly,#lz,#lñ{
+	font-size: 50px;
+}
+
+#guiones{
+	padding-left:65px;
 }
 
 @media only screen and (max-width: 480px){

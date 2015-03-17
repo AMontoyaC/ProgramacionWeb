@@ -9,6 +9,8 @@ $(document).ready(function(){
 	var jug2;
 	var b=0;
 
+	//1jug
+	var padivinar;
 
 
 	$('#icono').hide();
@@ -22,6 +24,21 @@ $(document).ready(function(){
 	$('#agregarpalabra').hide();
 	$('#categorias').hide();
 	$('#t1jug').hide();
+
+	//ocultar cuerpo
+	/*
+	$('#t1jugicono').hide();
+	$('#t1jugcuerpo').hide();
+	$('#t1jugbizq').hide();
+	$('#t1jugbder').hide();
+	$('#t1jugpizq').hide();
+	$('#t1jugpder').hide();
+	*/
+
+
+	//1jug
+	var nguiones;
+	var dguiones;
 
 	document.body.style.backgroundColor = "#FFFFFF";
 	$('#entrar').click(function(){
@@ -161,56 +178,72 @@ $(document).ready(function(){
 		$('#categorias').hide();
 		$('#t1jugicono').attr('src',rutaicono);
 		$('#t1jug').show();
-		elegir_palabra("paisesyciudades","npaisesyciudades");
+		padivinar=elegir_palabra("paisesyciudades","npaisesyciudades");
+		nguiones=num_guiones(padivinar);
+		dguiones=dib_guiones(nguiones);
 	});
 
 	$('#ic2').click(function(){
 		$('#categorias').hide();
 		$('#t1jugicono').attr('src',rutaicono);
 		$('#t1jug').show();
-		elegir_palabra("comida","ncomida");
+		padivinar=elegir_palabra("comida","ncomida");
+		nguiones=num_guiones(padivinar);
+		dguiones=dib_guiones(nguiones);
 	});
 
 	$('#ic3').click(function(){
 		$('#categorias').hide();
 		$('#t1jugicono').attr('src',rutaicono);
 		$('#t1jug').show();
-		elegir_palabra("deportes","ndeportes");
+		padivinar=elegir_palabra("deportes","ndeportes");
+		nguiones=num_guiones(padivinar);
+		dguiones=dib_guiones(nguiones);
 	});
 
 	$('#ic4').click(function(){
 		$('#categorias').hide();
 		$('#t1jugicono').attr('src',rutaicono);
 		$('#t1jug').show();
-		elegir_palabra("disney","ndisney");
+		padivinar=elegir_palabra("disney","ndisney");
+		nguiones=num_guiones(padivinar);
+		dguiones=dib_guiones(nguiones);
 	});
 
 	$('#ic5').click(function(){
 		$('#categorias').hide();
 		$('#t1jugicono').attr('src',rutaicono);
 		$('#t1jug').show();
-		elegir_palabra("marcas","nmarcas");
+		padivinar=elegir_palabra("marcas","nmarcas");
+		nguiones=num_guiones(padivinar);
+		dguiones=dib_guiones(nguiones);
 	});
 
 	$('#ic6').click(function(){
 		$('#categorias').hide();
 		$('#t1jugicono').attr('src',rutaicono);
 		$('#t1jug').show();
-		elegir_palabra("musica","nmusica");
+		padivinar=elegir_palabra("musica","nmusica");
+		nguiones=num_guiones(padivinar);
+		dguiones=dib_guiones(nguiones);
 	});
 
 	$('#ic7').click(function(){
 		$('#categorias').hide();
 		$('#t1jugicono').attr('src',rutaicono);
 		$('#t1jug').show();
-		elegir_palabra("peliculasyseries","npeliculasyseries");
+		padivinar=elegir_palabra("peliculasyseries","npeliculasyseries");
+		nguiones=num_guiones(padivinar);
+		dguiones=dib_guiones(nguiones);
 	});
 
 	$('#ic8').click(function(){
 		$('#categorias').hide();
 		$('#t1jugicono').attr('src',rutaicono);
 		$('#t1jug').show();
-		elegir_palabra("personajes","npersonajes");
+		padivinar=elegir_palabra("personajes","npersonajes");
+		nguiones=num_guiones(padivinar);
+		dguiones=dib_guiones(nguiones);
 	});
 
 
@@ -408,4 +441,23 @@ function elegir_palabra(c,nc){
 		num=Math.round((Math.random()*npersonajes)+1);
 		p=personajes[num];
 	}
+
+	return p;
+}
+
+function num_guiones(pal){
+	var guiones=0;
+	for(var i=0;i<pal.length;i++){
+		guiones++;
+	}
+	return guiones;
+}
+
+function dib_guiones(ng){
+	var sguiones="";
+	for(var i=0;i<ng;i++){
+		sguiones+="_ ";
+	}
+
+	return sguiones;
 }
