@@ -8,6 +8,10 @@ $(document).ready(function(){
 	var pal2;
 	var jug2;
 	var b=0;
+	var puntos1jug=200;
+	var puntos2jug=200;
+	var contahorcado2=0;
+	var numjugen2jug=1;
 
 	//1jug
 	var padivinar;
@@ -22,11 +26,21 @@ $(document).ready(function(){
 	$('#creditos').hide();
 	$('#opciones').hide();
 	$('#cambiaricono').hide();
+
+	$('#a12jugadores').hide();
 	$('#2jugadores').hide();
+	$('#2jugadores2').hide();
+	$('#t2jug').hide();
+	$('#a22jugadores').hide();
+	$('#a32jugadores').hide();
+	$('#a42jugadores').hide();
+	$('#resultados2jug').hide();
+
 	$('#agregarpalabra').hide();
 	$('#categorias').hide();
 	$('#t1jug').hide();
 	$('#ganaste').hide();
+	$('#perdiste').hide();
 
 	//ocultar cuerpo
 	$('#t1jugicono').hide();
@@ -35,6 +49,14 @@ $(document).ready(function(){
 	$('#t1jugbder').hide();
 	$('#t1jugpizq').hide();
 	$('#t1jugpder').hide();
+
+	//ocultar cuerpo 2jug
+	$('#t2jugicono').hide();
+	$('#t2jugcuerpo').hide();
+	$('#t2jugbizq').hide();
+	$('#t2jugbder').hide();
+	$('#t2jugpizq').hide();
+	$('#t2jugpder').hide();
 
 
 	//1jug
@@ -101,7 +123,25 @@ $(document).ready(function(){
 
 	$('#btn2jug').click(function(){
 		$('#menu').hide();
+		$('#a12jugadores').show();
+		reiniciar2();
+		numjugen2jug=1;
+		document.getElementById('puntos2').innerHTML =200;
+		document.jug2.pal2.value="";
+		document.jug1.pal1.value="";
+		document.jug2.nomjug2.value="";
+		document.jug1.nomjug1.value="";
+
+	});
+
+	$('#a1sig').click(function(){
+		$('#a12jugadores').hide();
 		$('#2jugadores').show();
+	});
+
+	$('#a3sig').click(function(){
+		$('#a32jugadores').hide();
+		$('#2jugadores2').show();
 	});
 
 	$('#formjug1_menu').click(function(){
@@ -109,29 +149,100 @@ $(document).ready(function(){
 		$('#2jugadores').hide();
 	});
 
+	$('#formjug2_menu').click(function(){
+		$('#menu').show();
+		$('#2jugadores').hide();
+	});
+
+	$('#t2jug_menu').click(function(){
+		$('#menu').show();
+		$('#t2jug').hide();
+	});
+
+	$('#r2_menu').click(function(){
+		$('#menu').show();
+		$('#resultados2jug').hide();
+	});
+
 	$('#listo1').click(function(){
 		pal1 = document.jug1.pal1.value;
 		jug1 = document.jug1.nomjug1.value;
+		if(pal1!=null){
+			if(pal1.length>10){
+				$('#icono').hide();
+				$('#titulo').hide();
+				$('#menu').hide();
+				alert("Palabra mayor a 10 caracteres");
+				document.jug1.pal1.value="";
+			}
+			else{
+	   			var v=tiene_numeros(pal1);
 
-		if(pal1.length>10){
-			$('#icono').hide();
-			$('#titulo').hide();
-			$('#menu').hide();
-			alert("Palabra mayor a 10 caracteres");
-			document.jug1.pal1.value="";
+	   			if(v==1){
+	   				alert("Tiene caracteres especiales y/o mayusculas");
+	   				document.jug1.pal1.value="";
+	   			}
+	   			else{
+	   				//alert("ALL GOOD");
+	   				$('#2jugadores').hide();
+	   				$('#a22jugadores').show();
+	   			}
+			}
 		}
 		else{
-   			var v=tiene_numeros(pal1);
-
-   			if(v==1){
-   				alert("Tiene caracteres especiales");
-   				document.jug1.pal1.value="";
-   			}
-   			else{
-   				alert("ALL GOOD");
-   			}
+			alert("NO hay palabra!");
 		}
 	});
+
+	$('#listo22').click(function(){
+		pal2 = document.jug2.pal2.value;
+		jug2 = document.jug2.nomjug2.value;
+		if(pal2!=null){
+			if(pal2.length>10){
+				$('#icono').hide();
+				$('#titulo').hide();
+				$('#menu').hide();
+				alert("Palabra mayor a 10 caracteres");
+				document.jug2.pal2.value="";
+			}
+			else{
+	   			var v=tiene_numeros(pal2);
+
+	   			if(v==1){
+	   				alert("Tiene caracteres especiales y/o mayusculas");
+	   				document.jug2.pal2.value="";
+	   			}
+	   			else{
+	   				//alert("ALL GOOD");
+	   				$('#2jugadores2').hide();
+	   				$('#a42jugadores').show();
+	   			}
+			}
+		}
+		else{
+			alert("NO hay palabra!");
+		}
+	});
+
+	$('#a2sig').click(function(){
+		$('#a22jugadores').hide();
+		$('#t2jug').show();
+		padivinar=pal1;
+		nguiones=num_guiones(padivinar);
+		dguiones=dib_guiones(nguiones);
+		$('#guiones2').text(dguiones);
+	});
+
+	$('#a4sig').click(function(){
+		reiniciar2();
+		$('#a42jugadores').hide();
+		$('#t2jug').show();
+		padivinar=pal2;
+		nguiones=num_guiones(padivinar);
+		dguiones=dib_guiones(nguiones);
+		$('#guiones2').text(dguiones);
+	});
+
 
 	$('#btnagrpalabras').click(function(){
 		$('#opciones').hide();
@@ -256,10 +367,12 @@ $(document).ready(function(){
 		nguiones=num_guiones(padivinar);
 		dguiones=dib_guiones(nguiones);
 		$('#guiones').text(dguiones);
-		alert(padivinar);
 	});
 
-	$('#g_menu').click(function(){
+	$('#g_menu').click(reiniciar);
+	$('#p_menu').click(reiniciar);
+
+	function reiniciar(){
 		document.getElementById("la").disabled=false;
 		document.getElementById("la").style.color = "#FFFFFF";
 		document.getElementById("lb").disabled=false;
@@ -315,8 +428,10 @@ $(document).ready(function(){
 		document.getElementById("lz").disabled=false;
 		document.getElementById("lz").style.color = "#FFFFFF";
 		puntos=200;
+		document.getElementById('puntos').innerHTML =puntos;
 		$('#menu').show();
 		$('#ganaste').hide();
+		$('#perdiste').hide();
 		$('#t1jugicono').hide();
 		$('#t1jugcuerpo').hide();
 		$('#t1jugbizq').hide();
@@ -324,8 +439,71 @@ $(document).ready(function(){
 		$('#t1jugpizq').hide();
 		$('#t1jugpder').hide();
 		contahorcado=0;
-	});
+	}
 
+	function reiniciar2(){
+		document.getElementById("la2").disabled=false;
+		document.getElementById("la2").style.color = "#FFFFFF";
+		document.getElementById("lb2").disabled=false;
+		document.getElementById("lb2").style.color = "#FFFFFF";
+		document.getElementById("lc2").disabled=false;
+		document.getElementById("lc2").style.color = "#FFFFFF";
+		document.getElementById("ld2").disabled=false;
+		document.getElementById("ld2").style.color = "#FFFFFF";
+		document.getElementById("le2").disabled=false;
+		document.getElementById("le2").style.color = "#FFFFFF";
+		document.getElementById("lf2").disabled=false;
+		document.getElementById("lf2").style.color = "#FFFFFF";
+		document.getElementById("lg2").disabled=false;
+		document.getElementById("lg2").style.color = "#FFFFFF";
+		document.getElementById("lh2").disabled=false;
+		document.getElementById("lh2").style.color = "#FFFFFF";
+		document.getElementById("li2").disabled=false;
+		document.getElementById("li2").style.color = "#FFFFFF";
+		document.getElementById("lj2").disabled=false;
+		document.getElementById("lj2").style.color = "#FFFFFF";
+		document.getElementById("lk2").disabled=false;
+		document.getElementById("lk2").style.color = "#FFFFFF";
+		document.getElementById("ll2").disabled=false;
+		document.getElementById("ll2").style.color = "#FFFFFF";
+		document.getElementById("lm2").disabled=false;
+		document.getElementById("lm2").style.color = "#FFFFFF";
+		document.getElementById("ln2").disabled=false;
+		document.getElementById("ln2").style.color = "#FFFFFF";
+		document.getElementById("lñ2").disabled=false;
+		document.getElementById("lñ2").style.color = "#FFFFFF";
+		document.getElementById("lo2").disabled=false;
+		document.getElementById("lo2").style.color = "#FFFFFF";
+		document.getElementById("lp2").disabled=false;
+		document.getElementById("lp2").style.color = "#FFFFFF";
+		document.getElementById("lq2").disabled=false;
+		document.getElementById("lq2").style.color = "#FFFFFF";
+		document.getElementById("lr2").disabled=false;
+		document.getElementById("lr2").style.color = "#FFFFFF";
+		document.getElementById("ls2").disabled=false;
+		document.getElementById("ls2").style.color = "#FFFFFF";
+		document.getElementById("lt2").disabled=false;
+		document.getElementById("lt2").style.color = "#FFFFFF";
+		document.getElementById("lu2").disabled=false;
+		document.getElementById("lu2").style.color = "#FFFFFF";
+		document.getElementById("lv2").disabled=false;
+		document.getElementById("lv2").style.color = "#FFFFFF";
+		document.getElementById("lw2").disabled=false;
+		document.getElementById("lw2").style.color = "#FFFFFF";
+		document.getElementById("lx2").disabled=false;
+		document.getElementById("lx2").style.color = "#FFFFFF";
+		document.getElementById("ly2").disabled=false;
+		document.getElementById("ly2").style.color = "#FFFFFF";
+		document.getElementById("lz2").disabled=false;
+		document.getElementById("lz2").style.color = "#FFFFFF";
+		$('#t2jugicono').hide();
+		$('#t2jugcuerpo').hide();
+		$('#t2jugbizq').hide();
+		$('#t2jugbder').hide();
+		$('#t2jugpizq').hide();
+		$('#t2jugpder').hide();
+		contahorcado2=0;
+	}
 
 	function letra(let){
 		banderaletra=bandletra(padivinar,let);
@@ -378,11 +556,11 @@ $(document).ready(function(){
 
 				var Particle = function(x, y, vx, vy, radius, team){
 					this.x = x;
-				  this.y = y;
-				  this.vx = vx;
-				  this.vy = vy;
-				  this.radius = radius;
-				  this.team = team;
+					this.y = y;
+					this.vx = vx;
+					this.vy = vy;
+					this.radius = radius;
+					this.team = team;
 				}
 
 				var createParticles = function(){
@@ -482,9 +660,9 @@ $(document).ready(function(){
 				}
 			    
 				var loopsIDidItAgain = function(){
-				  eraseIt();  
+				  	eraseIt();  
 					updateParticles();  
-				  renderParticles();
+				  	renderParticles();
 				}
 
 			createParticles();
@@ -521,8 +699,11 @@ $(document).ready(function(){
 		}
 
 		if(contahorcado==6){
-			alert("perdiste :(");
-			//$('#t1jug').hide();
+			//alert("perdiste :(");
+			$('#t1jug').hide();
+			$('#perdiste').show();
+
+			$('#ppuntos').text(puntos);
 		}
 	}
 
@@ -664,6 +845,242 @@ $(document).ready(function(){
 	});
 
 
+	//jugadores2 botones
+	//botones letras
+	$('#la2').click(function(){
+		document.getElementById("la2").disabled=true;
+		document.getElementById("la2").style.color = "#ff0000";
+		letra2("a");
+	});
+	$('#lb2').click(function(){
+		document.getElementById("lb2").disabled=true;
+		document.getElementById("lb2").style.color = "#ff0000";
+		letra2("b");
+	});
+	$('#lc2').click(function(){
+		document.getElementById("lc2").disabled=true;
+		document.getElementById("lc2").style.color = "#ff0000";
+		letra2("c");
+	});
+	$('#ld2').click(function(){
+		document.getElementById("ld2").disabled=true;
+		document.getElementById("ld2").style.color = "#ff0000";
+		letra2("d");
+	});
+	$('#le2').click(function(){
+		document.getElementById("le2").disabled=true;
+		document.getElementById("le2").style.color = "#ff0000";
+		letra2("e");
+	});
+	$('#lf2').click(function(){
+		document.getElementById("lf2").disabled=true;
+		document.getElementById("lf2").style.color = "#ff0000";
+		letra2("f");
+	});
+	$('#lg2').click(function(){
+		document.getElementById("lg2").disabled=true;
+		document.getElementById("lg2").style.color = "#ff0000";
+		letra2("g");
+	});
+	$('#lh2').click(function(){
+		document.getElementById("lh2").disabled=true;
+		document.getElementById("lh2").style.color = "#ff0000";
+		letra2("h");
+	});
+	$('#li2').click(function(){
+		document.getElementById("li2").disabled=true;
+		document.getElementById("li2").style.color = "#ff0000";
+		letra2("i");
+	});
+	$('#lj2').click(function(){
+		document.getElementById("lj2").disabled=true;
+		document.getElementById("lj2").style.color = "#ff0000";
+		letra2("j");
+	});
+	$('#lk2').click(function(){
+		document.getElementById("lk2").disabled=true;
+		document.getElementById("lk2").style.color = "#ff0000";
+		letra2("k");
+	});
+	$('#ll2').click(function(){
+		document.getElementById("ll2").disabled=true;
+		document.getElementById("ll2").style.color = "#ff0000";
+		letra2("l");
+	});
+	$('#lm2').click(function(){
+		document.getElementById("lm2").disabled=true;
+		document.getElementById("lm2").style.color = "#ff0000";
+		letra2("m");
+	});
+	$('#ln2').click(function(){
+		document.getElementById("ln2").disabled=true;
+		document.getElementById("ln2").style.color = "#ff0000";
+		letra2("n");
+	});
+	$('#lñ2').click(function(){
+		document.getElementById("lñ2").disabled=true;
+		document.getElementById("lñ2").style.color = "#ff0000";
+		letra2("ñ");
+	});
+	$('#lo2').click(function(){
+		document.getElementById("lo2").disabled=true;
+		document.getElementById("lo2").style.color = "#ff0000";
+		letra2("o");
+	});
+	$('#lp2').click(function(){
+		document.getElementById("lp2").disabled=true;
+		document.getElementById("lp2").style.color = "#ff0000";
+		letra2("p");
+	});
+	$('#lq2').click(function(){
+		document.getElementById("lq2").disabled=true;
+		document.getElementById("lq2").style.color = "#ff0000";
+		letra2("q");
+	});
+	$('#lr2').click(function(){
+		document.getElementById("lr2").disabled=true;
+		document.getElementById("lr2").style.color = "#ff0000";
+		letra2("r");
+	});
+	$('#ls2').click(function(){
+		document.getElementById("ls2").disabled=true;
+		document.getElementById("ls2").style.color = "#ff0000";
+		letra2("s");
+	});
+	$('#lt2').click(function(){
+		document.getElementById("lt2").disabled=true;
+		document.getElementById("lt2").style.color = "#ff0000";
+		letra2("t");
+	});
+	$('#lu2').click(function(){
+		document.getElementById("lu2").disabled=true;
+		document.getElementById("lu2").style.color = "#ff0000";
+		letra2("u");
+	});
+	$('#lv2').click(function(){
+		document.getElementById("lv2").disabled=true;
+		document.getElementById("lv2").style.color = "#ff0000";
+		letra2("v");
+	});
+	$('#lw2').click(function(){
+		document.getElementById("lw2").disabled=true;
+		document.getElementById("lw2").style.color = "#ff0000";
+		letra2("w");
+	});
+	$('#lx2').click(function(){
+		document.getElementById("lx2").disabled=true;
+		document.getElementById("lx2").style.color = "#ff0000";
+		letra2("x");
+	});
+	$('#ly2').click(function(){
+		document.getElementById("ly2").disabled=true;
+		document.getElementById("ly2").style.color = "#ff0000";
+		letra2("y");
+	});
+	$('#lz2').click(function(){
+		document.getElementById("lz2").disabled=true;
+		document.getElementById("lz2").style.color = "#ff0000";
+		letra2("z");
+	});
+
+
+	//letra 2 jug
+	function letra2(let){
+		banderaletra=bandletra(padivinar,let);
+		
+		if(banderaletra!=0){
+			//encontrar lugar de la letra
+			var ndg;
+			ndg=buscar(padivinar,let,dguiones);
+			dguiones=ndg;
+			$('#guiones2').text("");		
+			$('#guiones2').text(dguiones);
+
+			if(numjugen2jug==1){
+				puntos1jug=puntos1jug+10;
+				document.getElementById('puntos2').innerHTML =puntos1jug;
+			}
+			else{
+				puntos2jug=puntos2jug+10;
+				document.getElementById('puntos2').innerHTML =puntos2jug;
+			}
+			
+			//saber si gano
+			vgano=gano(dguiones,padivinar);
+
+			//GANADOR
+			if(vgano==1){
+				if(numjugen2jug==1){
+					$('#t2jug').hide();
+					$('#a32jugadores').show();
+					numjugen2jug=2;
+					document.getElementById('puntos2').innerHTML =200;
+				}
+				else{
+					//alert("finish 1");
+					$('#t2jug').hide();
+					$('#lbl1').text(jug1);
+					$('#lbl2').text(jug2);
+					$('#p11').text(puntos2jug);
+					$('#p2').text(puntos1jug);
+					$('#resultados2jug').show();
+				}
+			}
+			
+		}
+		if(banderaletra==0){
+			contahorcado2++;
+
+			if(numjugen2jug==1){
+				puntos1jug=puntos1jug-20;
+				document.getElementById('puntos2').innerHTML =puntos1jug;
+			}
+			else{
+				puntos2jug=puntos2jug-20;
+				document.getElementById('puntos2').innerHTML =puntos2jug;
+			}
+
+			switch (contahorcado2){
+				case 1:
+					$('#t2jugicono').show();
+					break;
+				case 2:
+					$('#t2jugcuerpo').show();
+					break;
+				case 3:
+					$('#t2jugbizq').show();
+					break;
+				case 4:
+					$('#t2jugbder').show();
+					break;
+				case 5:
+					$('#t2jugpizq').show();
+					break;
+				case 6:
+					$('#t2jugpder').show();
+					break;
+			}
+		}
+
+		if(contahorcado2==6){
+			if(numjugen2jug==1){
+				$('#t2jug').hide();
+				$('#a32jugadores').show();
+				numjugen2jug=2;
+				document.getElementById('puntos2').innerHTML =200;
+			}
+			else{
+				//alert("finish 2");
+				$('#t2jug').hide();
+				$('#lbl1').text(jug1);
+				$('#lbl2').text(jug2);
+				$('#p11').text(puntos2jug);
+				$('#p2').text(puntos1jug);
+				$('#resultados2jug').show();
+			}
+		}
+	}
+
 	//depende click icono guardar su ruta
 	$('#i1').click(function(){
 		rutaicono="img/icono1.png";
@@ -728,7 +1145,7 @@ $(document).ready(function(){
 });
 
 
-var numeros="0123456789|°¬!#$%&/()=?'+*~´¨{[^}]`-_:.;,";
+var numeros="0123456789|°¬!#$%&/()=?'+*~´¨{[^}]`-_:.;,ABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
 
 function tiene_numeros(texto){
    for(i=0; i<texto.length; i++){

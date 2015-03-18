@@ -5,11 +5,11 @@ p{
 	font-size: 40px;
 }
 
-#cat_menu,#g_menu{
+#cat_menu,#g_menu,#p_menu{
 	padding-left: 20px;
 }
 
-#t1jug_menu{
+#t1jug_menu,#t2jug_menu,#r2_menu{
 	padding-left: 30px;
 }
 
@@ -20,7 +20,7 @@ p{
 	font-size: 70px;
 }
 
-label,input,button,#puntos{
+label,input,button,#puntos,#puntos2{
 	font-family: 'Chelsea Market', cursive;
 	text-align: justify;
 	color: white;
@@ -51,36 +51,36 @@ button{
 	text-align: center;
 }
 
-#t1jugicono{
+#t1jugicono,#t2jugicono{
 	position: absolute;
 	top:10px;
 }
 
-#t1jugcuerpo{
+#t1jugcuerpo,#t2jugcuerpo{
 	position: absolute;
 	top:90px;
 	left: 55px;
 }
 
-#t1jugbizq{
+#t1jugbizq,#t2jugbizq{
 	position: absolute;
 	top:120px;
 	margin-left:13px;
 }
 
-#t1jugbder{
+#t1jugbder,#t2jugbder{
 	position: absolute;
 	top:120px;
 	left:60px;
 }
 
-#t1jugpizq{
+#t1jugpizq,#t2jugpizq{
 	position: absolute;
 	top:280px;
 	margin-left:15px;
 }
 
-#t1jugpder{
+#t1jugpder,#t2jugpder{
 	position: absolute;
 	top:280px;
 	left:60px;
@@ -91,7 +91,12 @@ button{
 	font-size: 50px;
 }
 
-#guiones{
+#la2,#lb2,#lc2,#ld2,#le2,#lf2,#lg2,#lh2,#li2,#lj2,#lk2,#ll2,#lm2,#ln2,#lo2,#lp2,#lq2
+,#lr2,#ls2,#lt2,#lu2,#lv2,#lw2,#lx2,#ly2,#lz2,#lñ2{
+	font-size: 50px;
+}
+
+#guiones,#guiones2{
 	padding-left:65px;
 }
 
