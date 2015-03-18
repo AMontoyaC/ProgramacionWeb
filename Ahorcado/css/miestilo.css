@@ -5,7 +5,7 @@ p{
 	font-size: 40px;
 }
 
-#cat_menu{
+#cat_menu,#g_menu{
 	padding-left: 20px;
 }
 
@@ -20,7 +20,7 @@ p{
 	font-size: 70px;
 }
 
-label,input,button{
+label,input,button,#puntos{
 	font-family: 'Chelsea Market', cursive;
 	text-align: justify;
 	color: white;
@@ -94,6 +94,21 @@ button{
 #guiones{
 	padding-left:65px;
 }
+
+#lblganaste{
+	text-align: center;
+	font-size: 60px;
+}
+
+
+canvas {
+  background: transparent;
+	display: block;
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
 
 @media only screen and (max-width: 480px){
 	#entrar,#titulo{

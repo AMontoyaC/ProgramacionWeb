@@ -11,8 +11,8 @@ $(document).ready(function(){
 
 	//1jug
 	var padivinar;
-	//0 si no adivino y 1 si ya adivino
-	var vadivino=0;
+	//0 si no gano y 1 si ya gano
+	var vgano=0;
 
 
 	$('#icono').hide();
@@ -26,6 +26,7 @@ $(document).ready(function(){
 	$('#agregarpalabra').hide();
 	$('#categorias').hide();
 	$('#t1jug').hide();
+	$('#ganaste').hide();
 
 	//ocultar cuerpo
 	$('#t1jugicono').hide();
@@ -41,6 +42,7 @@ $(document).ready(function(){
 	var dguiones;
 	var banderaletra;
 	var contahorcado=0;
+	var puntos=200;
 
 	document.body.style.backgroundColor = "#FFFFFF";
 	$('#entrar').click(function(){
@@ -257,450 +259,408 @@ $(document).ready(function(){
 		alert(padivinar);
 	});
 
+	$('#g_menu').click(function(){
+		document.getElementById("la").disabled=false;
+		document.getElementById("la").style.color = "#FFFFFF";
+		document.getElementById("lb").disabled=false;
+		document.getElementById("lb").style.color = "#FFFFFF";
+		document.getElementById("lc").disabled=false;
+		document.getElementById("lc").style.color = "#FFFFFF";
+		document.getElementById("ld").disabled=false;
+		document.getElementById("ld").style.color = "#FFFFFF";
+		document.getElementById("le").disabled=false;
+		document.getElementById("le").style.color = "#FFFFFF";
+		document.getElementById("lf").disabled=false;
+		document.getElementById("lf").style.color = "#FFFFFF";
+		document.getElementById("lg").disabled=false;
+		document.getElementById("lg").style.color = "#FFFFFF";
+		document.getElementById("lh").disabled=false;
+		document.getElementById("lh").style.color = "#FFFFFF";
+		document.getElementById("li").disabled=false;
+		document.getElementById("li").style.color = "#FFFFFF";
+		document.getElementById("lj").disabled=false;
+		document.getElementById("lj").style.color = "#FFFFFF";
+		document.getElementById("lk").disabled=false;
+		document.getElementById("lk").style.color = "#FFFFFF";
+		document.getElementById("ll").disabled=false;
+		document.getElementById("ll").style.color = "#FFFFFF";
+		document.getElementById("lm").disabled=false;
+		document.getElementById("lm").style.color = "#FFFFFF";
+		document.getElementById("ln").disabled=false;
+		document.getElementById("ln").style.color = "#FFFFFF";
+		document.getElementById("lñ").disabled=false;
+		document.getElementById("lñ").style.color = "#FFFFFF";
+		document.getElementById("lo").disabled=false;
+		document.getElementById("lo").style.color = "#FFFFFF";
+		document.getElementById("lp").disabled=false;
+		document.getElementById("lp").style.color = "#FFFFFF";
+		document.getElementById("lq").disabled=false;
+		document.getElementById("lq").style.color = "#FFFFFF";
+		document.getElementById("lr").disabled=false;
+		document.getElementById("lr").style.color = "#FFFFFF";
+		document.getElementById("ls").disabled=false;
+		document.getElementById("ls").style.color = "#FFFFFF";
+		document.getElementById("lt").disabled=false;
+		document.getElementById("lt").style.color = "#FFFFFF";
+		document.getElementById("lu").disabled=false;
+		document.getElementById("lu").style.color = "#FFFFFF";
+		document.getElementById("lv").disabled=false;
+		document.getElementById("lv").style.color = "#FFFFFF";
+		document.getElementById("lw").disabled=false;
+		document.getElementById("lw").style.color = "#FFFFFF";
+		document.getElementById("lx").disabled=false;
+		document.getElementById("lx").style.color = "#FFFFFF";
+		document.getElementById("ly").disabled=false;
+		document.getElementById("ly").style.color = "#FFFFFF";
+		document.getElementById("lz").disabled=false;
+		document.getElementById("lz").style.color = "#FFFFFF";
+		puntos=200;
+		$('#menu').show();
+		$('#ganaste').hide();
+		$('#t1jugicono').hide();
+		$('#t1jugcuerpo').hide();
+		$('#t1jugbizq').hide();
+		$('#t1jugbder').hide();
+		$('#t1jugpizq').hide();
+		$('#t1jugpder').hide();
+		contahorcado=0;
+	});
+
+
+	function letra(let){
+		banderaletra=bandletra(padivinar,let);
+		
+		if(banderaletra!=0){
+			//encontrar lugar de la letra
+			var ndg;
+			ndg=buscar(padivinar,let,dguiones);
+			dguiones=ndg;
+			$('#guiones').text("");		
+			$('#guiones').text(dguiones);
+			puntos=puntos+10;
+			document.getElementById('puntos').innerHTML =puntos;
+			
+			//saber si gano
+			vgano=gano(dguiones,padivinar);
+
+			//GANADOR
+			if(vgano==1){
+				//alert("ganaste!");
+				$('#t1jug').hide();
+				$('#ganaste').show();
+
+				$('#gpuntos').text(puntos);
+
+				//////////////////////CONFETI
+				var c = document.getElementById('c'),
+			    ctx = c.getContext('2d'),
+			    cw = window.innerWidth,
+			    ch = window.innerHeight;
+				c.width = cw;
+				c.height = ch;
+				var rand = function(a,b){return ~~((Math.random()*(b-a+1))+a);}
+
+				var particles = [],
+				particlesPerTeam = 40,
+			    maxVelocity = 3,
+			    teams = [];
+			    teamCount = 12;
+				var ti;
+
+			    for(ti = 0; ti < teamCount; ti++){
+			      teams.push({
+			        team: ti,
+			        color: 'hsla('+((360/teamCount)*ti)+', 90%, 50%, .8)',
+			        attracts: ti,
+			        repels: (ti === teamCount-1) ? 0 : ti+1
+			      });
+			    }
+
+				var Particle = function(x, y, vx, vy, radius, team){
+					this.x = x;
+				  this.y = y;
+				  this.vx = vx;
+				  this.vy = vy;
+				  this.radius = radius;
+				  this.team = team;
+				}
+
+				var createParticles = function(){
+					var i = teams.length;
+					while(i--){
+				  		var i2 = particlesPerTeam;
+					  	while(i2--){
+					      particles.push(new Particle(
+					        cw/2,
+					        ch/2,
+					      	rand(-1000, 1000)/1000,
+					      	rand(-1000, 1000)/1000,
+					      	rand(1, 6)/2,
+					      	i      		
+					      ));
+						}
+			  		}
+				}
+			    
+				var updateParticles = function(){
+					var i = particles.length;
+			  		while(i--){
+			    		var p = particles[i];
+						var i2 = particles.length;
+						while(i2--){
+				      		if(i != i2){
+						        var p2 = particles[i2];
+						        var dx = p2.x - p.x;
+						        var dy = p2.y - p.y;
+						        var dist = Math.sqrt(dx * dx + dy * dy);
+						        if(dist <= 100){       
+						          if(p.team == teams[p2.team].attracts){
+						            p.vx += dx/(30000*p2.radius);
+						            p.vy += dy/(30000*p2.radius);
+						          } 
+						          else if(p.team == teams[p2.team].repels){
+						            p.vx -= dx/(55000*p2.radius);
+						            p.vy -= dy/(55000*p2.radius);
+						          }
+						        }
+			      			}
+						}
+						capVelocity(p);
+						p.x += p.vx;
+						p.y += p.vy;
+						loopBounds(p);
+			  		}   
+				}
+			    
+				var renderParticles = function(){
+			  		var i = particles.length;  
+			  		while(i--){
+					    var p = particles[i];
+					    ctx.fillStyle = teams[p.team].color;
+					    ctx.beginPath();
+					    ctx.arc(p.x, p.y, p.radius, 0, Math.PI *2, false);
+					    ctx.closePath();
+					    ctx.fill();
+			  		}   
+				}
+
+				var loopBounds = function(p){
+				  if(p.y < -p.radius){
+				    p.y = ch + p.radius;
+				  }
+				  if(p.x > cw + p.radius){
+				    p.x = -p.radius;
+				  }
+				  if(p.y > ch + p.radius){
+				    p.y = -p.radius;
+				  }		
+				  if(p.x < -p.radius){
+				    p.x = cw + p.radius;
+				  }
+				}
+			    
+				var capVelocity = function(p){
+					 if(p.vx > maxVelocity){
+				      p.vx = maxVelocity;
+				   }
+				  if(p.vx < -maxVelocity){
+				      p.vx = -maxVelocity;
+				   }
+				  if(p.vy > maxVelocity){
+				      p.vy = maxVelocity;
+				   }
+				  if(p.vy < -maxVelocity){
+				      p.vy = -maxVelocity;
+				   }
+				}
+			    
+				var eraseIt = function(){  
+				  ctx.globalCompositeOperation = 'destination-out';
+				  ctx.fillStyle = 'rgba(0, 0, 0, .3)';
+				  ctx.fillRect(0, 0, cw, ch);
+				  ctx.globalCompositeOperation = 'lighter';
+				}
+			    
+				var loopsIDidItAgain = function(){
+				  eraseIt();  
+					updateParticles();  
+				  renderParticles();
+				}
+
+			createParticles();
+			setInterval(loopsIDidItAgain, 16);
+				//////////////////////////////////
+			}
+			
+		}
+		if(banderaletra==0){
+			contahorcado++;
+			puntos=puntos-20;
+			document.getElementById('puntos').innerHTML =puntos;
+
+			switch (contahorcado){
+				case 1:
+					$('#t1jugicono').show();
+					break;
+				case 2:
+					$('#t1jugcuerpo').show();
+					break;
+				case 3:
+					$('#t1jugbizq').show();
+					break;
+				case 4:
+					$('#t1jugbder').show();
+					break;
+				case 5:
+					$('#t1jugpizq').show();
+					break;
+				case 6:
+					$('#t1jugpder').show();
+					break;
+			}
+		}
+
+		if(contahorcado==6){
+			alert("perdiste :(");
+			//$('#t1jug').hide();
+		}
+	}
 
 	//botones letras
 	$('#la').click(function(){
 		document.getElementById("la").disabled=true;
-		//saber si la letra esta
-		banderaletra=bandletra(padivinar,"a");
-		
-		if(banderaletra!=0){
-			//encontrar lugar de la letra
-			var ndg;
-			ndg=buscar(padivinar,"a",dguiones);
-			dguiones=ndg;
-			$('#guiones').text("");		
-			$('#guiones').text(dguiones);	
-		}
-		if(banderaletra==0){
-			contahorcado++;
-
-
-			switch (contahorcado){
-				case 1:
-					$('#t1jugicono').show();
-					break;
-				case 2:
-					$('#t1jugcuerpo').show();
-					break;
-				case 3:
-					$('#t1jugbizq').show();
-					break;
-				case 4:
-					$('#t1jugbder').show();
-					break;
-				case 5:
-					$('#t1jugpizq').show();
-					break;
-				case 6:
-					$('#t1jugpder').show();
-					break;
-			}
-		}
-
-		if(contahorcado==6){
-			alert("perdiste");
-		}
-
-
+		document.getElementById("la").style.color = "#ff0000";
+		letra("a");
 	});
 	$('#lb').click(function(){
 		document.getElementById("lb").disabled=true;
-		//saber si la letra esta
-		banderaletra=bandletra(padivinar,"b");
-		
-		if(banderaletra!=0){
-			//encontrar lugar de la letra
-			var ndg;
-			ndg=buscar(padivinar,"b",dguiones);
-			dguiones=ndg;
-			$('#guiones').text("");		
-			$('#guiones').text(dguiones);	
-		}
-		if(banderaletra==0){
-			contahorcado++;
-
-
-			switch (contahorcado){
-				case 1:
-					$('#t1jugicono').show();
-					break;
-				case 2:
-					$('#t1jugcuerpo').show();
-					break;
-				case 3:
-					$('#t1jugbizq').show();
-					break;
-				case 4:
-					$('#t1jugbder').show();
-					break;
-				case 5:
-					$('#t1jugpizq').show();
-					break;
-				case 6:
-					$('#t1jugpder').show();
-					break;
-			}
-		}
-
-		if(contahorcado==6){
-			alert("perdiste");
-		}
+		document.getElementById("lb").style.color = "#ff0000";
+		letra("b");
 	});
 	$('#lc').click(function(){
 		document.getElementById("lc").disabled=true;
-		//saber si la letra esta
-		banderaletra=bandletra(padivinar,"c");
-		
-		if(banderaletra!=0){
-			//encontrar lugar de la letra
-			var ndg;
-			ndg=buscar(padivinar,"c",dguiones);
-			dguiones=ndg;
-			$('#guiones').text("");		
-			$('#guiones').text(dguiones);	
-		}
-		if(banderaletra==0){
-			contahorcado++;
-
-
-			switch (contahorcado){
-				case 1:
-					$('#t1jugicono').show();
-					break;
-				case 2:
-					$('#t1jugcuerpo').show();
-					break;
-				case 3:
-					$('#t1jugbizq').show();
-					break;
-				case 4:
-					$('#t1jugbder').show();
-					break;
-				case 5:
-					$('#t1jugpizq').show();
-					break;
-				case 6:
-					$('#t1jugpder').show();
-					break;
-			}
-		}
-
-		if(contahorcado==6){
-			alert("perdiste");
-		}
+		document.getElementById("lc").style.color = "#ff0000";
+		letra("c");
 	});
 	$('#ld').click(function(){
 		document.getElementById("ld").disabled=true;
-		//saber si la letra esta
-		banderaletra=bandletra(padivinar,"d");
-		
-		if(banderaletra!=0){
-			//encontrar lugar de la letra
-			var ndg;
-			ndg=buscar(padivinar,"d",dguiones);
-			dguiones=ndg;
-			$('#guiones').text("");		
-			$('#guiones').text(dguiones);	
-		}
-		if(banderaletra==0){
-			contahorcado++;
-
-
-			switch (contahorcado){
-				case 1:
-					$('#t1jugicono').show();
-					break;
-				case 2:
-					$('#t1jugcuerpo').show();
-					break;
-				case 3:
-					$('#t1jugbizq').show();
-					break;
-				case 4:
-					$('#t1jugbder').show();
-					break;
-				case 5:
-					$('#t1jugpizq').show();
-					break;
-				case 6:
-					$('#t1jugpder').show();
-					break;
-			}
-		}
-
-		if(contahorcado==6){
-			alert("perdiste");
-		}
+		document.getElementById("ld").style.color = "#ff0000";
+		letra("d");
 	});
 	$('#le').click(function(){
 		document.getElementById("le").disabled=true;
-		//saber si la letra esta
-		banderaletra=bandletra(padivinar,"e");
-		
-		if(banderaletra!=0){
-			//encontrar lugar de la letra
-			var ndg;
-			ndg=buscar(padivinar,"e",dguiones);
-			dguiones=ndg;
-			$('#guiones').text("");		
-			$('#guiones').text(dguiones);	
-		}
-		if(banderaletra==0){
-			contahorcado++;
-
-
-			switch (contahorcado){
-				case 1:
-					$('#t1jugicono').show();
-					break;
-				case 2:
-					$('#t1jugcuerpo').show();
-					break;
-				case 3:
-					$('#t1jugbizq').show();
-					break;
-				case 4:
-					$('#t1jugbder').show();
-					break;
-				case 5:
-					$('#t1jugpizq').show();
-					break;
-				case 6:
-					$('#t1jugpder').show();
-					break;
-			}
-		}
-
-		if(contahorcado==6){
-			alert("perdiste");
-		}
+		document.getElementById("le").style.color = "#ff0000";
+		letra("e");
 	});
 	$('#lf').click(function(){
 		document.getElementById("lf").disabled=true;
-		//saber si la letra esta
-		banderaletra=bandletra(padivinar,"f");
-		
-		if(banderaletra!=0){
-			//encontrar lugar de la letra
-			var ndg;
-			ndg=buscar(padivinar,"f",dguiones);
-			dguiones=ndg;
-			$('#guiones').text("");		
-			$('#guiones').text(dguiones);	
-		}
-		if(banderaletra==0){
-			contahorcado++;
-
-
-			switch (contahorcado){
-				case 1:
-					$('#t1jugicono').show();
-					break;
-				case 2:
-					$('#t1jugcuerpo').show();
-					break;
-				case 3:
-					$('#t1jugbizq').show();
-					break;
-				case 4:
-					$('#t1jugbder').show();
-					break;
-				case 5:
-					$('#t1jugpizq').show();
-					break;
-				case 6:
-					$('#t1jugpder').show();
-					break;
-			}
-		}
-
-		if(contahorcado==6){
-			alert("perdiste");
-		}
+		document.getElementById("lf").style.color = "#ff0000";
+		letra("f");
 	});
 	$('#lg').click(function(){
 		document.getElementById("lg").disabled=true;
-		//saber si la letra esta
-		banderaletra=bandletra(padivinar,"g");
-		
-		if(banderaletra!=0){
-			//encontrar lugar de la letra
-			var ndg;
-			ndg=buscar(padivinar,"g",dguiones);
-			dguiones=ndg;
-			$('#guiones').text("");		
-			$('#guiones').text(dguiones);	
-		}
-		if(banderaletra==0){
-			contahorcado++;
-
-
-			switch (contahorcado){
-				case 1:
-					$('#t1jugicono').show();
-					break;
-				case 2:
-					$('#t1jugcuerpo').show();
-					break;
-				case 3:
-					$('#t1jugbizq').show();
-					break;
-				case 4:
-					$('#t1jugbder').show();
-					break;
-				case 5:
-					$('#t1jugpizq').show();
-					break;
-				case 6:
-					$('#t1jugpder').show();
-					break;
-			}
-		}
-
-		if(contahorcado==6){
-			alert("perdiste");
-		}
+		document.getElementById("lg").style.color = "#ff0000";
+		letra("g");
 	});
 	$('#lh').click(function(){
 		document.getElementById("lh").disabled=true;
-		//saber si la letra esta
-		banderaletra=bandletra(padivinar,"h");
-		
-		if(banderaletra!=0){
-			//encontrar lugar de la letra
-			var ndg;
-			ndg=buscar(padivinar,"h",dguiones);
-			dguiones=ndg;
-			$('#guiones').text("");		
-			$('#guiones').text(dguiones);	
-		}
-		if(banderaletra==0){
-			contahorcado++;
-
-
-			switch (contahorcado){
-				case 1:
-					$('#t1jugicono').show();
-					break;
-				case 2:
-					$('#t1jugcuerpo').show();
-					break;
-				case 3:
-					$('#t1jugbizq').show();
-					break;
-				case 4:
-					$('#t1jugbder').show();
-					break;
-				case 5:
-					$('#t1jugpizq').show();
-					break;
-				case 6:
-					$('#t1jugpder').show();
-					break;
-			}
-		}
-
-		if(contahorcado==6){
-			alert("perdiste");
-		}
+		document.getElementById("lh").style.color = "#ff0000";
+		letra("h");
 	});
 	$('#li').click(function(){
 		document.getElementById("li").disabled=true;
-		//saber si la letra esta
-		banderaletra=bandletra(padivinar,"i");
-		
-		if(banderaletra!=0){
-			//encontrar lugar de la letra
-			var ndg;
-			ndg=buscar(padivinar,"i",dguiones);
-			dguiones=ndg;
-			$('#guiones').text("");		
-			$('#guiones').text(dguiones);	
-		}
-		if(banderaletra==0){
-			contahorcado++;
-
-
-			switch (contahorcado){
-				case 1:
-					$('#t1jugicono').show();
-					break;
-				case 2:
-					$('#t1jugcuerpo').show();
-					break;
-				case 3:
-					$('#t1jugbizq').show();
-					break;
-				case 4:
-					$('#t1jugbder').show();
-					break;
-				case 5:
-					$('#t1jugpizq').show();
-					break;
-				case 6:
-					$('#t1jugpder').show();
-					break;
-			}
-		}
-
-		if(contahorcado==6){
-			alert("perdiste");
-		}
+		document.getElementById("li").style.color = "#ff0000";
+		letra("i");
 	});
 	$('#lj').click(function(){
 		document.getElementById("lj").disabled=true;
+		document.getElementById("lj").style.color = "#ff0000";
+		letra("j");
 	});
 	$('#lk').click(function(){
 		document.getElementById("lk").disabled=true;
+		document.getElementById("lk").style.color = "#ff0000";
+		letra("k");
 	});
 	$('#ll').click(function(){
 		document.getElementById("ll").disabled=true;
+		document.getElementById("ll").style.color = "#ff0000";
+		letra("l");
 	});
 	$('#lm').click(function(){
 		document.getElementById("lm").disabled=true;
+		document.getElementById("lm").style.color = "#ff0000";
+		letra("m");
 	});
 	$('#ln').click(function(){
 		document.getElementById("ln").disabled=true;
+		document.getElementById("ln").style.color = "#ff0000";
+		letra("n");
 	});
 	$('#lñ').click(function(){
 		document.getElementById("lñ").disabled=true;
+		document.getElementById("lñ").style.color = "#ff0000";
+		letra("ñ");
 	});
 	$('#lo').click(function(){
 		document.getElementById("lo").disabled=true;
+		document.getElementById("lo").style.color = "#ff0000";
+		letra("o");
 	});
 	$('#lp').click(function(){
 		document.getElementById("lp").disabled=true;
+		document.getElementById("lp").style.color = "#ff0000";
+		letra("p");
 	});
 	$('#lq').click(function(){
 		document.getElementById("lq").disabled=true;
+		document.getElementById("lq").style.color = "#ff0000";
+		letra("q");
 	});
 	$('#lr').click(function(){
 		document.getElementById("lr").disabled=true;
+		document.getElementById("lr").style.color = "#ff0000";
+		letra("r");
 	});
 	$('#ls').click(function(){
 		document.getElementById("ls").disabled=true;
+		document.getElementById("ls").style.color = "#ff0000";
+		letra("s");
 	});
 	$('#lt').click(function(){
 		document.getElementById("lt").disabled=true;
+		document.getElementById("lt").style.color = "#ff0000";
+		letra("t");
 	});
 	$('#lu').click(function(){
 		document.getElementById("lu").disabled=true;
+		document.getElementById("lu").style.color = "#ff0000";
+		letra("u");
 	});
 	$('#lv').click(function(){
 		document.getElementById("lv").disabled=true;
+		document.getElementById("lv").style.color = "#ff0000";
+		letra("v");
 	});
 	$('#lw').click(function(){
 		document.getElementById("lw").disabled=true;
+		document.getElementById("lw").style.color = "#ff0000";
+		letra("w");
 	});
 	$('#lx').click(function(){
 		document.getElementById("lx").disabled=true;
+		document.getElementById("lx").style.color = "#ff0000";
+		letra("x");
 	});
 	$('#ly').click(function(){
 		document.getElementById("ly").disabled=true;
+		document.getElementById("ly").style.color = "#ff0000";
+		letra("y");
 	});
 	$('#lz').click(function(){
 		document.getElementById("lz").disabled=true;
+		document.getElementById("lz").style.color = "#ff0000";
+		letra("z");
 	});
 
 
@@ -788,9 +748,9 @@ var nmusica=20;
 var npeliculasyseries=20;
 var npersonajes=20;
 
-var paisesyciudades = ["Mexico","Celaya","Berlin","Londres","Belgica","Dublin","Texas","Paris"
-				,"Brasil","Guanajuato","Irlanda","China","Dubai","Inglaterra","Rusia"
-				,"Alemania","Francia","Argentina","Croacia","Ecuador"];
+var paisesyciudades = ["mexico","celaya","berlin","londres","belgica","dublin","texas","paris"
+				,"brasil","guanajuato","irlanda","china","dubai","inglaterra","rusia"
+				,"alemania","francia","argentina","croacia","ecuador"];
 
 var comida = ["hamburguesa","papas","tacos","torta","pozole","sopa","gelatina","pollo","carne"
 				,"jamon","salchicha","pizza","sushi","helado","queso","cereal","huevo","ensalada","arroz","galleta"];
@@ -815,7 +775,7 @@ var peliculasyseries = ["friends","glee","bones","csi","revenge","lost","house",
 						,"transformers","godzilla","divergente","noe","her","xmen"];				
 
 var personajes = ["thor","ironman","batman","superman","bumblebee","hulk","gatubela","spiderman"
-					,"pinocho","olaf","homero","rapunzel","Sulley","bart","daisy","piolin"
+					,"pinocho","olaf","homero","rapunzel","sulley","bart","daisy","piolin"
 					,"goofy","donald","shrek","wolverine"];
 
 
@@ -980,4 +940,37 @@ function bandletra(palabra,letra){
 	}
 
 	return numletra;
+}
+
+
+function gano(dguiones,palabra){
+	vg=0;
+
+	var nump=dguiones.length;
+	var arrdguiones=new Array(palabra.length);
+
+	//poner palabra con guiones o letras encontradas en un arreglo
+	var j=1;
+	for(var i=0;i<nump;i++){
+		if(i==0){
+			arrdguiones[i]=dguiones.charAt(i);
+		}
+		if(i!=0 && i%2==0){
+			arrdguiones[j]=dguiones.charAt(i);
+			j++;
+		}
+	}
+
+	//sacar palabra del arreglo
+	var p1="";
+
+	for(var i=0;i<palabra.length;i++){
+		p1+=arrdguiones[i];
+	}
+
+	if(p1==palabra){
+		vg=1;
+	}
+
+	return vg;
 }
