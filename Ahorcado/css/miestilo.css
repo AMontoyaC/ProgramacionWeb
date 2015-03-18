@@ -106,9 +106,9 @@ button{
 }
 
 
-canvas {
+canvas{
   background: transparent;
-	display: block;
+  display: block;
   left: 0;
   position: absolute;
   top: 0;
@@ -120,9 +120,15 @@ canvas {
 		width: 100px;
 	}
 
-	#btn1jug,#btn2jug,#btnopc,#btnayuda,#btncreditos{
+	#btn1jug,#btn2jug,#btnopc,#btnayuda,#btncreditos,#2jugadores,#2jugadores2{
 		width: 100px;
 		height: 50px;
+	}
+}
+
+@media only screen and (max-width: 738px){
+	#a12jugadores,#a22jugadores,#a32jugadores,#a42jugadores,#nomjug1,#pal1,#nomjug2,#pal2{
+		width: 100px;
 	}
 }
 

@@ -167,7 +167,7 @@ $(document).ready(function(){
 	$('#listo1').click(function(){
 		pal1 = document.jug1.pal1.value;
 		jug1 = document.jug1.nomjug1.value;
-		if(pal1!=null){
+		if(pal1!=""){
 			if(pal1.length>10){
 				$('#icono').hide();
 				$('#titulo').hide();
@@ -197,7 +197,7 @@ $(document).ready(function(){
 	$('#listo22').click(function(){
 		pal2 = document.jug2.pal2.value;
 		jug2 = document.jug2.nomjug2.value;
-		if(pal2!=null){
+		if(pal2!=""){
 			if(pal2.length>10){
 				$('#icono').hide();
 				$('#titulo').hide();
@@ -297,6 +297,8 @@ $(document).ready(function(){
 		nguiones=num_guiones(padivinar);
 		dguiones=dib_guiones(nguiones);
 		$('#guiones').text(dguiones);
+
+		document.getElementById('gotaudio').play();
 	});
 
 	$('#ic2').click(function(){
@@ -307,6 +309,8 @@ $(document).ready(function(){
 		nguiones=num_guiones(padivinar);
 		dguiones=dib_guiones(nguiones);
 		$('#guiones').text(dguiones);
+
+		document.getElementById('gotaudio').play();
 	});
 
 	$('#ic3').click(function(){
@@ -317,6 +321,8 @@ $(document).ready(function(){
 		nguiones=num_guiones(padivinar);
 		dguiones=dib_guiones(nguiones);
 		$('#guiones').text(dguiones);
+
+		document.getElementById('gotaudio').play();
 	});
 
 	$('#ic4').click(function(){
@@ -327,6 +333,8 @@ $(document).ready(function(){
 		nguiones=num_guiones(padivinar);
 		dguiones=dib_guiones(nguiones);
 		$('#guiones').text(dguiones);
+
+		document.getElementById('gotaudio').play();
 	});
 
 	$('#ic5').click(function(){
@@ -337,6 +345,8 @@ $(document).ready(function(){
 		nguiones=num_guiones(padivinar);
 		dguiones=dib_guiones(nguiones);
 		$('#guiones').text(dguiones);
+
+		document.getElementById('gotaudio').play();
 	});
 
 	$('#ic6').click(function(){
@@ -347,6 +357,8 @@ $(document).ready(function(){
 		nguiones=num_guiones(padivinar);
 		dguiones=dib_guiones(nguiones);
 		$('#guiones').text(dguiones);
+
+		document.getElementById('gotaudio').play();
 	});
 
 	$('#ic7').click(function(){
@@ -357,6 +369,8 @@ $(document).ready(function(){
 		nguiones=num_guiones(padivinar);
 		dguiones=dib_guiones(nguiones);
 		$('#guiones').text(dguiones);
+
+		document.getElementById('gotaudio').play();
 	});
 
 	$('#ic8').click(function(){
@@ -367,10 +381,20 @@ $(document).ready(function(){
 		nguiones=num_guiones(padivinar);
 		dguiones=dib_guiones(nguiones);
 		$('#guiones').text(dguiones);
+
+		document.getElementById('gotaudio').play();
+		alert(padivinar);
 	});
 
 	$('#g_menu').click(reiniciar);
-	$('#p_menu').click(reiniciar);
+	$('#p_menu').click(function(){
+		reiniciar();
+		//detener audio loser
+		document.getElementById('loseraudio').pause();
+
+		document.getElementById('winaudio').pause();
+	});
+
 
 	function reiniciar(){
 		document.getElementById("la").disabled=false;
@@ -524,14 +548,20 @@ $(document).ready(function(){
 			//GANADOR
 			if(vgano==1){
 				//alert("ganaste!");
+
+				//parar audio gotsound
+				document.getElementById('gotaudio').pause();
+
 				$('#t1jug').hide();
 				$('#ganaste').show();
 
 				$('#gpuntos').text(puntos);
-
+				
+				document.getElementById('winaudio').play();
 				//////////////////////CONFETI
 				var c = document.getElementById('c'),
 			    ctx = c.getContext('2d'),
+
 			    cw = window.innerWidth,
 			    ch = window.innerHeight;
 				c.width = cw;
@@ -667,6 +697,8 @@ $(document).ready(function(){
 
 			createParticles();
 			setInterval(loopsIDidItAgain, 16);
+
+			    ctx.clearRect(c.width, c.height);
 				//////////////////////////////////
 			}
 			
@@ -700,10 +732,16 @@ $(document).ready(function(){
 
 		if(contahorcado==6){
 			//alert("perdiste :(");
+
+			//parar audio gotsound
+			document.getElementById('gotaudio').pause();
+
 			$('#t1jug').hide();
 			$('#perdiste').show();
 
 			$('#ppuntos').text(puntos);
+			//iniciar audio loser
+			document.getElementById('loseraudio').play();
 		}
 	}
 

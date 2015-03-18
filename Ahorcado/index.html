@@ -261,6 +261,9 @@
 
         <!-- Tablero 1 jug -->
         <div class="row" id="t1jug">
+            <audio preload="auto" id='gotaudio'>
+              <source src="musica/gotsound.mp3" type="audio/mp3">
+            </audio>
             <div class="row">
                 <div class="col-md-2">
                     <img src="img/menu.png" id="t1jug_menu" align="center" width="150px" height="100px">
@@ -397,8 +400,12 @@
 
         <!-- Ganaste -->
         <div class="row" id="ganaste">
+            <audio preload="auto" id='winaudio'>
+              <source src="musica/win.wav" type="audio/wav">
+            </audio>
             <canvas id="c">
             </canvas>
+
             <div class="row">
                 <div class="col-md-2">
                     <img src="img/menu.png" id="g_menu" align="center" width="150px" height="100px">
@@ -425,6 +432,9 @@
 
         <!-- PERDISTE -->
         <div class="row" id="perdiste">
+            <audio preload="auto" id='loseraudio'>
+              <source src="musica/loser.mp3" type="audio/mp3">
+            </audio>
             <div class="row">
                 <div class="col-md-2">
                     <img src="img/menu.png" id="p_menu" align="center" width="150px" height="100px">
@@ -481,7 +491,7 @@
                 <div class="form-group">
                      <label for="pal1">  Ingresa la palabra que quieras</label>
                     <div class="col-sm-10">
-                        <input class="form-control" type="text" name="pal1" id="pal1">
+                        <input class="form-control" type="text" name="pal1" id="pal1" value="">
                     </div>
                 </div>
                 <br><br><br><br>
@@ -510,7 +520,7 @@
                 <div class="form-group">
                      <label for="pal2">  Ingresa la palabra que quieras</label>
                     <div class="col-sm-10">
-                        <input class="form-control" type="text" name="pal2" id="pal2">
+                        <input class="form-control" type="text" name="pal2" id="pal2" value="">
                     </div>
                 </div>
                 <br><br><br><br>
@@ -699,17 +709,17 @@
                 <br><br><br><br><br><br><br><br><br>
                 <div class="row">
                     <div class="col-md-4" align="right">
-                        <label id="lbl1">Jug 1</label>
+                        <label id="lbl1">Jugador 1</label>
                         <br><br>
-                        <label id="p11">P 1</label>
+                        <label id="p11">Puntos 1</label>
                     </div>
                     <div class="col-md-4" align="center">
                         <img src="img/versus.gif" align="center" >
                     </div>
                     <div class="col-md-4" align="left">
-                        <label id="lbl2">Jug 2</label>
+                        <label id="lbl2">Jugador 2</label>
                         <br><br>
-                        <label id="p2">P 2</label>
+                        <label id="p2">Puntos 2</label>
                     </div>
                 </div>    
             </div>
