@@ -11,6 +11,8 @@ $(document).ready(function(){
 
 	//1jug
 	var padivinar;
+	//0 si no adivino y 1 si ya adivino
+	var vadivino=0;
 
 
 	$('#icono').hide();
@@ -26,19 +28,19 @@ $(document).ready(function(){
 	$('#t1jug').hide();
 
 	//ocultar cuerpo
-	/*
 	$('#t1jugicono').hide();
 	$('#t1jugcuerpo').hide();
 	$('#t1jugbizq').hide();
 	$('#t1jugbder').hide();
 	$('#t1jugpizq').hide();
 	$('#t1jugpder').hide();
-	*/
 
 
 	//1jug
 	var nguiones;
 	var dguiones;
+	var banderaletra;
+	var contahorcado=0;
 
 	document.body.style.backgroundColor = "#FFFFFF";
 	$('#entrar').click(function(){
@@ -181,6 +183,7 @@ $(document).ready(function(){
 		padivinar=elegir_palabra("paisesyciudades","npaisesyciudades");
 		nguiones=num_guiones(padivinar);
 		dguiones=dib_guiones(nguiones);
+		$('#guiones').text(dguiones);
 	});
 
 	$('#ic2').click(function(){
@@ -190,6 +193,7 @@ $(document).ready(function(){
 		padivinar=elegir_palabra("comida","ncomida");
 		nguiones=num_guiones(padivinar);
 		dguiones=dib_guiones(nguiones);
+		$('#guiones').text(dguiones);
 	});
 
 	$('#ic3').click(function(){
@@ -199,6 +203,7 @@ $(document).ready(function(){
 		padivinar=elegir_palabra("deportes","ndeportes");
 		nguiones=num_guiones(padivinar);
 		dguiones=dib_guiones(nguiones);
+		$('#guiones').text(dguiones);
 	});
 
 	$('#ic4').click(function(){
@@ -208,6 +213,7 @@ $(document).ready(function(){
 		padivinar=elegir_palabra("disney","ndisney");
 		nguiones=num_guiones(padivinar);
 		dguiones=dib_guiones(nguiones);
+		$('#guiones').text(dguiones);
 	});
 
 	$('#ic5').click(function(){
@@ -217,6 +223,7 @@ $(document).ready(function(){
 		padivinar=elegir_palabra("marcas","nmarcas");
 		nguiones=num_guiones(padivinar);
 		dguiones=dib_guiones(nguiones);
+		$('#guiones').text(dguiones);
 	});
 
 	$('#ic6').click(function(){
@@ -226,6 +233,7 @@ $(document).ready(function(){
 		padivinar=elegir_palabra("musica","nmusica");
 		nguiones=num_guiones(padivinar);
 		dguiones=dib_guiones(nguiones);
+		$('#guiones').text(dguiones);
 	});
 
 	$('#ic7').click(function(){
@@ -235,6 +243,7 @@ $(document).ready(function(){
 		padivinar=elegir_palabra("peliculasyseries","npeliculasyseries");
 		nguiones=num_guiones(padivinar);
 		dguiones=dib_guiones(nguiones);
+		$('#guiones').text(dguiones);
 	});
 
 	$('#ic8').click(function(){
@@ -244,6 +253,454 @@ $(document).ready(function(){
 		padivinar=elegir_palabra("personajes","npersonajes");
 		nguiones=num_guiones(padivinar);
 		dguiones=dib_guiones(nguiones);
+		$('#guiones').text(dguiones);
+		alert(padivinar);
+	});
+
+
+	//botones letras
+	$('#la').click(function(){
+		document.getElementById("la").disabled=true;
+		//saber si la letra esta
+		banderaletra=bandletra(padivinar,"a");
+		
+		if(banderaletra!=0){
+			//encontrar lugar de la letra
+			var ndg;
+			ndg=buscar(padivinar,"a",dguiones);
+			dguiones=ndg;
+			$('#guiones').text("");		
+			$('#guiones').text(dguiones);	
+		}
+		if(banderaletra==0){
+			contahorcado++;
+
+
+			switch (contahorcado){
+				case 1:
+					$('#t1jugicono').show();
+					break;
+				case 2:
+					$('#t1jugcuerpo').show();
+					break;
+				case 3:
+					$('#t1jugbizq').show();
+					break;
+				case 4:
+					$('#t1jugbder').show();
+					break;
+				case 5:
+					$('#t1jugpizq').show();
+					break;
+				case 6:
+					$('#t1jugpder').show();
+					break;
+			}
+		}
+
+		if(contahorcado==6){
+			alert("perdiste");
+		}
+
+
+	});
+	$('#lb').click(function(){
+		document.getElementById("lb").disabled=true;
+		//saber si la letra esta
+		banderaletra=bandletra(padivinar,"b");
+		
+		if(banderaletra!=0){
+			//encontrar lugar de la letra
+			var ndg;
+			ndg=buscar(padivinar,"b",dguiones);
+			dguiones=ndg;
+			$('#guiones').text("");		
+			$('#guiones').text(dguiones);	
+		}
+		if(banderaletra==0){
+			contahorcado++;
+
+
+			switch (contahorcado){
+				case 1:
+					$('#t1jugicono').show();
+					break;
+				case 2:
+					$('#t1jugcuerpo').show();
+					break;
+				case 3:
+					$('#t1jugbizq').show();
+					break;
+				case 4:
+					$('#t1jugbder').show();
+					break;
+				case 5:
+					$('#t1jugpizq').show();
+					break;
+				case 6:
+					$('#t1jugpder').show();
+					break;
+			}
+		}
+
+		if(contahorcado==6){
+			alert("perdiste");
+		}
+	});
+	$('#lc').click(function(){
+		document.getElementById("lc").disabled=true;
+		//saber si la letra esta
+		banderaletra=bandletra(padivinar,"c");
+		
+		if(banderaletra!=0){
+			//encontrar lugar de la letra
+			var ndg;
+			ndg=buscar(padivinar,"c",dguiones);
+			dguiones=ndg;
+			$('#guiones').text("");		
+			$('#guiones').text(dguiones);	
+		}
+		if(banderaletra==0){
+			contahorcado++;
+
+
+			switch (contahorcado){
+				case 1:
+					$('#t1jugicono').show();
+					break;
+				case 2:
+					$('#t1jugcuerpo').show();
+					break;
+				case 3:
+					$('#t1jugbizq').show();
+					break;
+				case 4:
+					$('#t1jugbder').show();
+					break;
+				case 5:
+					$('#t1jugpizq').show();
+					break;
+				case 6:
+					$('#t1jugpder').show();
+					break;
+			}
+		}
+
+		if(contahorcado==6){
+			alert("perdiste");
+		}
+	});
+	$('#ld').click(function(){
+		document.getElementById("ld").disabled=true;
+		//saber si la letra esta
+		banderaletra=bandletra(padivinar,"d");
+		
+		if(banderaletra!=0){
+			//encontrar lugar de la letra
+			var ndg;
+			ndg=buscar(padivinar,"d",dguiones);
+			dguiones=ndg;
+			$('#guiones').text("");		
+			$('#guiones').text(dguiones);	
+		}
+		if(banderaletra==0){
+			contahorcado++;
+
+
+			switch (contahorcado){
+				case 1:
+					$('#t1jugicono').show();
+					break;
+				case 2:
+					$('#t1jugcuerpo').show();
+					break;
+				case 3:
+					$('#t1jugbizq').show();
+					break;
+				case 4:
+					$('#t1jugbder').show();
+					break;
+				case 5:
+					$('#t1jugpizq').show();
+					break;
+				case 6:
+					$('#t1jugpder').show();
+					break;
+			}
+		}
+
+		if(contahorcado==6){
+			alert("perdiste");
+		}
+	});
+	$('#le').click(function(){
+		document.getElementById("le").disabled=true;
+		//saber si la letra esta
+		banderaletra=bandletra(padivinar,"e");
+		
+		if(banderaletra!=0){
+			//encontrar lugar de la letra
+			var ndg;
+			ndg=buscar(padivinar,"e",dguiones);
+			dguiones=ndg;
+			$('#guiones').text("");		
+			$('#guiones').text(dguiones);	
+		}
+		if(banderaletra==0){
+			contahorcado++;
+
+
+			switch (contahorcado){
+				case 1:
+					$('#t1jugicono').show();
+					break;
+				case 2:
+					$('#t1jugcuerpo').show();
+					break;
+				case 3:
+					$('#t1jugbizq').show();
+					break;
+				case 4:
+					$('#t1jugbder').show();
+					break;
+				case 5:
+					$('#t1jugpizq').show();
+					break;
+				case 6:
+					$('#t1jugpder').show();
+					break;
+			}
+		}
+
+		if(contahorcado==6){
+			alert("perdiste");
+		}
+	});
+	$('#lf').click(function(){
+		document.getElementById("lf").disabled=true;
+		//saber si la letra esta
+		banderaletra=bandletra(padivinar,"f");
+		
+		if(banderaletra!=0){
+			//encontrar lugar de la letra
+			var ndg;
+			ndg=buscar(padivinar,"f",dguiones);
+			dguiones=ndg;
+			$('#guiones').text("");		
+			$('#guiones').text(dguiones);	
+		}
+		if(banderaletra==0){
+			contahorcado++;
+
+
+			switch (contahorcado){
+				case 1:
+					$('#t1jugicono').show();
+					break;
+				case 2:
+					$('#t1jugcuerpo').show();
+					break;
+				case 3:
+					$('#t1jugbizq').show();
+					break;
+				case 4:
+					$('#t1jugbder').show();
+					break;
+				case 5:
+					$('#t1jugpizq').show();
+					break;
+				case 6:
+					$('#t1jugpder').show();
+					break;
+			}
+		}
+
+		if(contahorcado==6){
+			alert("perdiste");
+		}
+	});
+	$('#lg').click(function(){
+		document.getElementById("lg").disabled=true;
+		//saber si la letra esta
+		banderaletra=bandletra(padivinar,"g");
+		
+		if(banderaletra!=0){
+			//encontrar lugar de la letra
+			var ndg;
+			ndg=buscar(padivinar,"g",dguiones);
+			dguiones=ndg;
+			$('#guiones').text("");		
+			$('#guiones').text(dguiones);	
+		}
+		if(banderaletra==0){
+			contahorcado++;
+
+
+			switch (contahorcado){
+				case 1:
+					$('#t1jugicono').show();
+					break;
+				case 2:
+					$('#t1jugcuerpo').show();
+					break;
+				case 3:
+					$('#t1jugbizq').show();
+					break;
+				case 4:
+					$('#t1jugbder').show();
+					break;
+				case 5:
+					$('#t1jugpizq').show();
+					break;
+				case 6:
+					$('#t1jugpder').show();
+					break;
+			}
+		}
+
+		if(contahorcado==6){
+			alert("perdiste");
+		}
+	});
+	$('#lh').click(function(){
+		document.getElementById("lh").disabled=true;
+		//saber si la letra esta
+		banderaletra=bandletra(padivinar,"h");
+		
+		if(banderaletra!=0){
+			//encontrar lugar de la letra
+			var ndg;
+			ndg=buscar(padivinar,"h",dguiones);
+			dguiones=ndg;
+			$('#guiones').text("");		
+			$('#guiones').text(dguiones);	
+		}
+		if(banderaletra==0){
+			contahorcado++;
+
+
+			switch (contahorcado){
+				case 1:
+					$('#t1jugicono').show();
+					break;
+				case 2:
+					$('#t1jugcuerpo').show();
+					break;
+				case 3:
+					$('#t1jugbizq').show();
+					break;
+				case 4:
+					$('#t1jugbder').show();
+					break;
+				case 5:
+					$('#t1jugpizq').show();
+					break;
+				case 6:
+					$('#t1jugpder').show();
+					break;
+			}
+		}
+
+		if(contahorcado==6){
+			alert("perdiste");
+		}
+	});
+	$('#li').click(function(){
+		document.getElementById("li").disabled=true;
+		//saber si la letra esta
+		banderaletra=bandletra(padivinar,"i");
+		
+		if(banderaletra!=0){
+			//encontrar lugar de la letra
+			var ndg;
+			ndg=buscar(padivinar,"i",dguiones);
+			dguiones=ndg;
+			$('#guiones').text("");		
+			$('#guiones').text(dguiones);	
+		}
+		if(banderaletra==0){
+			contahorcado++;
+
+
+			switch (contahorcado){
+				case 1:
+					$('#t1jugicono').show();
+					break;
+				case 2:
+					$('#t1jugcuerpo').show();
+					break;
+				case 3:
+					$('#t1jugbizq').show();
+					break;
+				case 4:
+					$('#t1jugbder').show();
+					break;
+				case 5:
+					$('#t1jugpizq').show();
+					break;
+				case 6:
+					$('#t1jugpder').show();
+					break;
+			}
+		}
+
+		if(contahorcado==6){
+			alert("perdiste");
+		}
+	});
+	$('#lj').click(function(){
+		document.getElementById("lj").disabled=true;
+	});
+	$('#lk').click(function(){
+		document.getElementById("lk").disabled=true;
+	});
+	$('#ll').click(function(){
+		document.getElementById("ll").disabled=true;
+	});
+	$('#lm').click(function(){
+		document.getElementById("lm").disabled=true;
+	});
+	$('#ln').click(function(){
+		document.getElementById("ln").disabled=true;
+	});
+	$('#lñ').click(function(){
+		document.getElementById("lñ").disabled=true;
+	});
+	$('#lo').click(function(){
+		document.getElementById("lo").disabled=true;
+	});
+	$('#lp').click(function(){
+		document.getElementById("lp").disabled=true;
+	});
+	$('#lq').click(function(){
+		document.getElementById("lq").disabled=true;
+	});
+	$('#lr').click(function(){
+		document.getElementById("lr").disabled=true;
+	});
+	$('#ls').click(function(){
+		document.getElementById("ls").disabled=true;
+	});
+	$('#lt').click(function(){
+		document.getElementById("lt").disabled=true;
+	});
+	$('#lu').click(function(){
+		document.getElementById("lu").disabled=true;
+	});
+	$('#lv').click(function(){
+		document.getElementById("lv").disabled=true;
+	});
+	$('#lw').click(function(){
+		document.getElementById("lw").disabled=true;
+	});
+	$('#lx').click(function(){
+		document.getElementById("lx").disabled=true;
+	});
+	$('#ly').click(function(){
+		document.getElementById("ly").disabled=true;
+	});
+	$('#lz').click(function(){
+		document.getElementById("lz").disabled=true;
 	});
 
 
@@ -460,4 +917,67 @@ function dib_guiones(ng){
 	}
 
 	return sguiones;
+}
+
+function buscar(palabra,letra,dguiones){
+	var nump=dguiones.length;
+	var arrdguiones=new Array(palabra.length);
+
+	//poner palabra con guiones o letras encontradas en un arreglo
+	var j=1;
+	for(var i=0;i<nump;i++){
+		if(i==0){
+			arrdguiones[i]=dguiones.charAt(i);
+		}
+		if(i!=0 && i%2==0){
+			arrdguiones[j]=dguiones.charAt(i);
+			j++;
+		}
+	}
+
+	//ver si la letra esta en la palabra y cuantas veces
+	var numletra=0;
+
+	for(var i=0;i<palabra.length;i++){
+		if(palabra.charAt(i)==letra){
+			numletra++;
+		}
+	}
+
+	//si esta la letra en la palabra, sacar posiciones y agregarla al arreglo
+	var posicion;
+
+	//si numletra es dif de 0 es que si se encontro letra
+	//si numletra es igual a 0 es que no esta la letra
+	if(numletra!=0){
+		for(var i=0;i<numletra;i++){
+			for(var i=0;i<palabra.length;i++){
+				if(palabra.charAt(i)==letra){
+					posicion=i;
+					arrdguiones[posicion]=letra;
+				}
+			}
+		}
+	}
+
+	//ya esta con la letra encontrada en el arreglo, ahora sacamos el arreglo para devolverlo y dibujarlo
+	var newdguiones="";
+
+	for(var i=0;i<palabra.length;i++){
+		newdguiones+=arrdguiones[i]+" ";
+	}
+
+	return newdguiones;
+}
+
+function bandletra(palabra,letra){
+	var numletra=0;
+
+	for(var i=0;i<palabra.length;i++){
+		if(palabra.charAt(i)==letra){
+			numletra++;
+		}
+	}
+
+	return numletra;
 }
