@@ -1,0 +1,5 @@
+//usuario para que pueda insertar clientes
+create user insCtes@localhost identified by '123456';
+
+grant insert on tienda.clientes to insCtes@localhost;
+grant insert on tienda.usuario to insCtes@localhost;

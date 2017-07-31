@@ -1,0 +1,12 @@
+YO
+X	Registro (cambiar a adodb)
+X	Login (mismo login)
+X	(mandar correo el password generado)
+X	captcha
+
+
+Ingresar productos (otra cuenta)
+
+
+X	mision, vision, valores
+X	contactanos

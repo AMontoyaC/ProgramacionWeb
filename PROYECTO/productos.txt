@@ -1,0 +1,14 @@
+Categorias
+- Celulares y Tablets
+	- Celulares
+	- Tablets
+
+- Tv, Audio y Foto
+	- Televisiones
+	- Camaras
+	- Audifonos
+
+- Computadoras y videojuegos
+	- Computadoras
+	- Consolas
+	- Videojuegos

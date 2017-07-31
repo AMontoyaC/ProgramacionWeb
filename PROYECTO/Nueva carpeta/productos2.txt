@@ -1,0 +1,132 @@
+celulares
+--------------------------------------------------------------------------------
+INSERT INTO productos (nombre,descripcion,precio,cantidad)
+VALUES ('MacBook Pro Apple','Intel core i5 4GB RAM',15990.00,20);
+--------------------------------------------------------------------------------
+INSERT INTO productos (nombre,descripcion,precio,cantidad)
+VALUES ('MacBook Pro LED','Intel core i5',14990.00,20);
+--------------------------------------------------------------------------------
+INSERT INTO productos (nombre,descripcion,precio,cantidad)
+VALUES ('Nueva ASUS ROG','i7 GTX 860m 1TB',21839.00,20);
+--------------------------------------------------------------------------------
+INSERT INTO productos (nombre,descripcion,precio,cantidad)
+VALUES ('Notebook toshiba tecra','A10 con 4gb ram exp a 8b',2833.00,20);
+--------------------------------------------------------------------------------
+INSERT INTO productos (nombre,descripcion,precio,cantidad)
+VALUES ('Laptop hp 655 A8 8GB','500GB W8',7799.00,20);
+--------------------------------------------------------------------------------
+INSERT INTO productos (nombre,descripcion,precio,cantidad)
+VALUES ('CPU Workstation LEnovo',' 520 4GB ram expandible',5998.00,20);
+--------------------------------------------------------------------------------
+INSERT INTO productos (nombre,descripcion,precio,cantidad)
+VALUES ('Laptop Lenovo Gamers','x220 Intel core i5 4gbRAM',3999.00,20);
+--------------------------------------------------------------------------------
+INSERT INTO productos (nombre,descripcion,precio,cantidad)
+VALUES ('Laptop Lenovo Thinkpad','T420 Intel core i5',4498.00,20);
+--------------------------------------------------------------------------------
+INSERT INTO productos (nombre,descripcion,precio,cantidad)
+VALUES ('Notebook Lenovo','4GB RAM Windows 8.1',4599.00,20);
+
+
+
+
+tablets
+--------------------------------------------------------------------------------
+INSERT INTO productos (nombre,descripcion,precio,cantidad)
+VALUES ('Apple iPad air 2','64gb',8199.00,20);
+--------------------------------------------------------------------------------
+INSERT INTO productos (nombre,descripcion,precio,cantidad)
+VALUES ('Apple iPad Air 2','16GB',6899.00,20);
+--------------------------------------------------------------------------------
+INSERT INTO productos (nombre,descripcion,precio,cantidad)
+VALUES ('Apple iPad mini 3','16GB',5799.00,20);
+--------------------------------------------------------------------------------
+INSERT INTO productos (nombre,descripcion,precio,cantidad)
+VALUES ('Tablet samsung galaxy','tab 4 ram 1.5GB',3975.00,20);
+--------------------------------------------------------------------------------
+INSERT INTO productos (nombre,descripcion,precio,cantidad)
+VALUES ('Apple iPad air 2','16gb',7199.00,20);
+--------------------------------------------------------------------------------
+INSERT INTO productos (nombre,descripcion,precio,cantidad)
+VALUES ('Samsung Galaxy tab 4','SM-T230 android 4.4',2545.00,20);
+--------------------------------------------------------------------------------
+INSERT INTO productos (nombre,descripcion,precio,cantidad)
+VALUES ('Tablet Vac A702','Android 4 HDMI',699.00,20);
+--------------------------------------------------------------------------------
+INSERT INTO productos (nombre,descripcion,precio,cantidad)
+VALUES ('Tablet Slate 7 Plus','1Gb RAM 8gb DD',1999.00,20);
+--------------------------------------------------------------------------------
+INSERT INTO productos (nombre,descripcion,precio,cantidad)
+VALUES ('Apple iPad Mini 3','16Gb',5799.00,20);
+--------------------------------------------------------------------------------
+INSERT INTO productos (nombre,descripcion,precio,cantidad)
+VALUES ('Tablet AVA de 7','android 4.2',599.00,20);
+--------------------------------------------------------------------------------
+INSERT INTO productos (nombre,descripcion,precio,cantidad)
+VALUES ('Tablet ava de 7','pantalla capacitiva 512 mb',599.00,20);
+--------------------------------------------------------------------------------
+INSERT INTO productos (nombre,descripcion,precio,cantidad)
+VALUES ('Tableta any 7','1gb 8gb android 4.2',999.00,20);
+
+
+
+
+camaras
+--------------------------------------------------------------------------------
+INSERT INTO productos (nombre,descripcion,precio,cantidad)
+VALUES ('Gopro Hero 3','White Edition Blanco',3899.00,20);
+--------------------------------------------------------------------------------
+INSERT INTO productos (nombre,descripcion,precio,cantidad)
+VALUES ('Camara Canon EOS','70D con lente 18-55mm',23499.00,20);
+--------------------------------------------------------------------------------
+INSERT INTO productos (nombre,descripcion,precio,cantidad)
+VALUES ('Camara reflex canon','eos rebel t5',10999.00,20);
+--------------------------------------------------------------------------------
+INSERT INTO productos (nombre,descripcion,precio,cantidad)
+VALUES ('Camara reflex digital','canon eos rebel t5i 18 mp',11999.00,20);
+--------------------------------------------------------------------------------
+INSERT INTO productos (nombre,descripcion,precio,cantidad)
+VALUES ('Camara refelx nikon','d3300 negra lk 18-55mm',9774.00,20);
+--------------------------------------------------------------------------------
+INSERT INTO productos (nombre,descripcion,precio,cantidad)
+VALUES ('Camara compacta','nikon coolpix modelo s6800',3699.00,20);
+--------------------------------------------------------------------------------
+INSERT INTO productos (nombre,descripcion,precio,cantidad)
+VALUES ('camara gopro hero 3','blanca',4199.00,20);
+--------------------------------------------------------------------------------
+INSERT INTO productos (nombre,descripcion,precio,cantidad)
+VALUES ('camara reflex nikon','D3200 rojo lk 18-55mm',6999.00,20);
+--------------------------------------------------------------------------------
+INSERT INTO productos (nombre,descripcion,precio,cantidad)
+VALUES ('camara gopro hero4','black music edition',6899.00,20);
+--------------------------------------------------------------------------------
+INSERT INTO productos (nombre,descripcion,precio,cantidad)
+VALUES ('Videocamara de doble','lente HD led de vision nocturna',899.00,20);
+--------------------------------------------------------------------------------
+INSERT INTO productos (nombre,descripcion,precio,cantidad)
+VALUES ('Camara reflex EOS','rebel t5 kit 18-55mm',5999.00,20);
+--------------------------------------------------------------------------------
+INSERT INTO productos (nombre,descripcion,precio,cantidad)
+VALUES ('Camara compacta','nikon coolpix modelo S6800',2199.00,20);
+
+
+
+consolas
+--------------------------------------------------------------------------------
+INSERT INTO productos (nombre,descripcion,precio,cantidad)
+VALUES ('Consola new nintendo','3ds xl-negro',3799.00,20);
+--------------------------------------------------------------------------------
+INSERT INTO productos (nombre,descripcion,precio,cantidad)
+VALUES ('Consola new nintendo','3ds xl-rojo',3799.00,20);
+--------------------------------------------------------------------------------
+INSERT INTO productos (nombre,descripcion,precio,cantidad)
+VALUES ('Xbox One microsoft','Juego descargable 8gb de ram 500gb de dd',6499.00,20);
+--------------------------------------------------------------------------------
+INSERT INTO productos (nombre,descripcion,precio,cantidad)
+VALUES ('Xbox one microsoft','+ kinect + juego 8gb ram',6999.00,20);
+--------------------------------------------------------------------------------
+INSERT INTO productos (nombre,descripcion,precio,cantidad)
+VALUES ('Disco duro 320 gb','xbox 360 slim',850.00,20);
+--------------------------------------------------------------------------------
+INSERT INTO productos (nombre,descripcion,precio,cantidad)
+VALUES ('Consola playstation4','Negro',8959.00,20);

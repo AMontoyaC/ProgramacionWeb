@@ -1,0 +1,159 @@
+body{
+		background-image: url("../imagenes/f.png");
+}
+.container{
+	background-color:white; 
+}
+
+button{
+	width:120px ;
+	text-align: center;
+}
+
+#barra{
+		background-color: #1C1C1C;
+		background-image: url("../imagenes/fb.png");
+}
+#barrai{
+		background-color: #1C1C1C;
+}
+
+.navbar-header{
+	background-image: url("../imagenes/fb.png");
+	border-bottom: 20px solid #AA0000;
+}
+#titulo{
+
+	font-family: 'Dosis', sans-serif;
+	font-size: 25px;
+}
+#tituloC{
+	background-color: red;
+}
+#barrabusq{
+	width: 400px;
+}
+
+#btnbuscar{
+	background-color: transparent;
+	border:none;
+	width: 50%;
+}
+#btnform{
+	background-color: #CE341C;
+	color: white;
+	font-family: 'Dosis', sans-serif;
+}
+#lblnom,#txtnom,#lblemail,#txtemail,#lblcemail,#txtcemail,#lblusuario
+,#txtusuario,#lblpassword,#txtpassword,#lblcpassword,#txtcpassword{
+	font-family: 'Dosis', sans-serif;
+	font-size: 20px;
+}
+#lblroi1,#lblroi2{
+	font-family: 'Dosis', sans-serif;
+	font-size: 15px;	
+}
+#btncomprar{
+	background-color: black;
+	border:none;
+	width: 105%;
+}
+#btninicio{
+	background-color: transparent;
+	border:none;
+	width: 105%;
+}
+.container{
+
+	
+}
+body{
+
+	h4{
+		color: red;
+	}
+}
+button{
+	width:120px ;
+	font-family: Bell MT;
+	text-align: center;
+}
+a{
+	color: #B22222;
+	font-family: Century Gothic;
+	font-weight: bold;
+
+
+}
+p{
+	text-align: justify;
+	font-family: 'Dosis', sans-serif;
+}
+.caption,.thumbnail{
+
+		background-color: #1C1C1C;
+}
+.lin{
+	display: block;
+	margin-bottom: 10px;
+	padding: 15px 0;
+	text-align: center;
+	text-decoration: none;
+	font-weight: bold;
+	color:white;
+	background: #1C1C1C;
+}
+.lm{
+	width: 70px;
+	height: 40px;
+	display: block;
+	margin-bottom: 5px;
+	padding: 10px 0;
+	text-align: center;
+	text-decoration: none;
+	font-weight: bold;
+	color:white;
+}
+h3{
+	font-family: Century Gothic;
+	text-align: center;
+}
+h1{
+	font-family: Century Gothic;
+	text-align: center;
+}
+h2{
+	font-family: Century Gothic;
+	text-align: center;
+}
+h5
+{
+	font-family: Century Gothic;
+	text-align: center;
+}
+h4
+{
+	font-family: 'Dosis', sans-serif;
+	text-align: center;
+	font-weight: bold;
+}
+
+.li{
+	font-family: Century Gothic;
+	text-align: center;
+}
+	td{/*--- lo aplicara a ambos---*/
+	border: 2px solid black;
+	background: white;
+	}
+	th{/*--- lo aplicara a ambos---*/
+	border: 2px solid black;
+	
+	
+		background-image: url("../imagenes/fb.png");
+	}
+	td,th {
+		-moz-box-shadow: 7px 7px 5px #000000 ;
+		-webkit-box-shadow: 7px 7px 5px #000000 ;
+		box-shadow: 7px 7px 5px #000000 ;
+	}
