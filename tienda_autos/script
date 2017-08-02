@@ -1,0 +1,29 @@
+create database tienda_autos;
+use tienda_autos;
+create table usuario(
+	id_usuario int not null AUTO_INCREMENT primary key,
+	nombre varchar(30),
+	apellido_pat varchar(30),
+	apellido_mat varchar(30),
+	domicilio varchar(35),
+	telefono int,
+	email varchar(50) unique ,
+	password varchar(32));
+
+create table vehiculo(
+	id_vehiculo int not null AUTO_INCREMENT primary key,
+	marca varchar(30),
+	modelo varchar(30),
+	color varchar(30),
+	precio numeric,
+	observaciones varchar(100),
+	disponibilidad varchar(1),
+	id_vendedor int,
+	constraint fk_vehiculo foreign key (id_vendedor) references usuario (id_usuario));
+
+create table carro_compra(
+	id_usuario int not null,
+	id_vehiculo int not null,
+	primary key (id_usuario,id_vehiculo),
+	constraint fk_carro1 foreign key (id_usuario) references usuario (id_usuario),
+	constraint fk_carro2 foreign key (id_vehiculo) references vehiculo (id_vehiculo));

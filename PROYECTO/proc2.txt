@@ -1,5 +1,0 @@
-DELIMITER //
-create procedure buscarCte(in usuariocte varchar(20),out id_cte int)
-BEGIN
-	set id_cte = (select id_cliente from usuario where usuario = usuariocte);
-END//

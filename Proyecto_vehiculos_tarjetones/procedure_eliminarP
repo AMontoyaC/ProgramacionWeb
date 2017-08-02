@@ -1,0 +1,22 @@
+CREATE OR REPLACE FUNCTION eliminarP(ip integer)
+  RETURNS text AS
+$BODY$
+DECLARE
+car integer;
+veh integer;
+BEGIN
+car = (select id_caract from vehiculo where id_propietario=ip);
+veh = (select id_vehiculo from vehiculo where id_propietario=ip);
+
+delete from vehiculo where id_vehiculo=veh;
+delete from caracteristicas where id_caract=car;
+
+update propietario set activo='0' where id_propietario=ip;
+
+RETURN 1;
+ROLLBACK;
+END;
+$BODY$
+  LANGUAGE plpgsql
+
+select eliminarP(3);

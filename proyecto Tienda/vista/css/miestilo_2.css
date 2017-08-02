@@ -1,0 +1,81 @@
+
+button{
+	width:120px ;
+	text-align: center;
+}
+#titulo{
+	font-family: 'Dosis', sans-serif;
+	font-size: 25px;
+}
+#barrabusq{
+	width: 400px;
+}
+
+#btnbuscar{
+	background-color: transparent;
+	border:none;
+	width: 50%;
+}
+#btnreg,#btnini{
+	background-color: #CE341C;
+	color: white;
+	font-family: 'Dosis', sans-serif;
+}
+#lblnom,#txtnom,#lblemail,#txtemail,#lblcemail,#txtcemail,#lblusuario
+,#txtusuario,#lblpassword,#txtpassword,#lblcpassword,#txtcpassword
+,#lbldir,#txtdir,#lblciu,#txtciu,#lblcp,#txtcp,#lbltel,#txttel,#txtapepat,#txtapemat,#lblapepat,#lblapemat{
+	font-family: 'Dosis', sans-serif;
+	font-size: 20px;
+}
+#lblroi1,#lblroi2{
+	font-family: 'Dosis', sans-serif;
+	font-size: 15px;	
+}
+
+.container{
+
+	
+}
+body{
+
+	h4{
+		color: red;
+	}
+}
+button{
+	width:120px ;
+	font-family: Bell MT;
+	text-align: center;
+}
+a{
+	color: #B22222;
+	font-family: Century Gothic;
+	font-weight: bold;
+}
+p{
+	font-family: Bell MT;
+	font-weight: bold;
+	text-align: justify;
+}
+.lm{
+	width: 70px;
+	height: 40px;
+	display: block;
+	margin-bottom: 5px;
+	padding: 10px 0;
+	text-align: center;
+	text-decoration: none;
+	font-weight: bold;
+	color:white;
+}
+.li{
+	font-family: Century Gothic;
+	text-align: center;
+}
+li{
+	font-family: 'Dosis', sans-serif;
+}
+ul{
+	position: absolute;
+	left: 450px;
+}

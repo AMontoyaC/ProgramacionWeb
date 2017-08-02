@@ -1,0 +1,247 @@
+body {
+    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    background-color: #FAFAFA;
+}
+
+p {
+    font-family: Arial;
+    font-size: 1.25em;
+    line-height: 1.6;
+    padding-top: 0;
+    color: #000;
+}
+
+.header{
+    background-color: #FAFAFA;
+    width: 90%;
+    margin: 10px auto;
+    height: 100%;
+}
+
+.titulo{
+    display: none;
+}
+
+#titulo{
+    color: green;
+    font-size: 36px;
+}
+
+#titulo{
+    text-align:center;
+    width: 33%;
+    float: left;
+}
+
+#logo{
+    width: 130px;
+    height: 150px;
+}
+
+#m{
+    border-top:3px solid #1D663F;
+    border-bottom:3px solid #1D663F;
+}
+
+.navbar-nav {
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 3px;
+}
+
+.img-full {
+    min-width: 100%;
+}
+
+.titulo-before,
+.titulo-name {
+    text-transform: capitalize;
+}
+
+.titulo-before {
+    margin: 15px 0;
+}
+
+.titulo-name {
+    margin: 0;
+    font-size: 4em;
+}
+
+.tagline-divider {
+    margin: 15px auto 3px;
+    max-width: 250px;
+    border-color: #999999;
+}
+
+.box {
+    margin-bottom: 20px;
+    padding: 30px 15px;
+    background: #E0E0DF;
+}
+
+
+.intro-text {
+    text-transform: uppercase;
+    font-size: 1.25em;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.img-border {
+    float: none;
+    margin: 0 auto 0;
+    border: #999999 solid 1px;
+}
+
+.img-left {
+    float: none;
+    margin: 0 auto 0;
+}
+
+footer {
+    background: #fff;
+    background: rgba(255,255,255,0.9);
+}
+
+footer p {
+    margin: 0;
+    padding: 50px 0;
+}
+
+@media screen and (min-width:768px) {
+    .titulo {
+        display: inherit;
+        margin: 0;
+        padding: 30px 0 10px;
+        text-align: center;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        font-family: "Josefin Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-size: 5em;
+        font-weight: 700;
+        line-height: normal;
+        color: #fff;
+    }
+
+    .top-divider {
+        margin-top: 0;
+    }
+
+    .img-left {
+        float: left;
+        margin-right: 25px;
+    }
+
+
+    .navbar {
+        border-radius: 0;
+    }
+
+
+    .navbar {
+        min-height: 0;
+    }
+
+    .menu {
+        border: none;
+        background: #fff;
+        background: rgba(255,255,255,0.9);
+    }
+
+    .nav>li>a {
+        padding: 35px;
+    }
+
+    .navbar-nav>li>a {
+        line-height: normal;
+        color: #008000;
+    }
+
+    .navbar-nav {
+        clear: both;
+        display: table;
+        float: none;
+        margin: 0 auto;
+        table-layout: fixed;
+        font-size: 1.25em;
+    }
+    nav a:hover{
+        color: black;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .box:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+#form_alta_vehiculos, #form_alta_propietarios{
+    padding-top: 10px;
+    border:3px solid #1D663F;
+}
+
+
+.col-sm-2.control-label{
+    color: black;
+    font-weight: bold;
+}
+
+#admin a{
+    color: #008000;
+}
+
+#admin a:hover{
+    color: black;s
+}
+
+#form_admin_propietarios.form-horizontal{
+    /*clear: both;*/
+    margin: 0;
+    border:3px solid #1D663F;
+}
+
+#tarjeton_titulo{
+    text-align: center;
+    font-family: "Josefin Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: rgb(0,128,0);
+    font-size: 30px;
+}
+#tarjeton_titulo2 , #tarjeton_titulo3{
+
+    font-family: "Josefin Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: #CF242A;
+    font-size: 25px;
+}
+
+#tarjeton_titulo3{
+    text-decoration: underline;
+}
+
+#tarjeton{
+    text-align: center;
+    width: 50%;
+    border:5px solid #CF242A;
+}
+
+#tarjeton_img{
+    padding-top: 10px;
+}
+
+.info_bottom{
+    color: gray;
+    font-size: 10px;
+}
+
+.div_botom{
+    font-size: 12px;
+}
+
+#tabla_admin_vehiculos td{
+    font-size: 14px;
+}

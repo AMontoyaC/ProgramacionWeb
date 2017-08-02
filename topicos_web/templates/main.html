@@ -1,0 +1,11 @@
+
+		<!--del lado de la presentación (plantillas como cual) se le puede agregar
+		código php para poder definir lógico-->
+		{if $v_contenido == 'portada'}
+
+			<h3 id="titulo-tec">Instituto Tecnológico<br> de Celaya</h3>
+			<img id="img-portada" src="images/itc1.jpg" alt="Portada">
+		{else}
+			<!-- {$v_contenido} -->
+			{include file=$v_contenido}
+		{/if}

@@ -1,0 +1,8 @@
+create procedure insertarUsuario (IN n varchar(30),IN  ap varchar(30),IN  am varchar(30),IN  d varchar(35),IN  t int, em varchar(50),IN  ps varchar(32),OUT op int)
+begin
+	declare op int;
+	insert into usuario (nombre,apellido_pat,apellido_mat,domicilio, telefono,email, password) values (n,ap,am,d,t,em,ps);
+	op = (select id_usuario from usuario where nombre = n and apellido_pat = ap and apellido_mat = am and domicilio = d and 											telefono = t and email = em and password = ps;)
+end
+
+select id_usuario from usuario where nombre = 'Andrea' and apellido_pat = 'Montoya' and apellido_mat = 'Cárdenas'

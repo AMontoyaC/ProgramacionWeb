@@ -1,0 +1,77 @@
+body{
+	background-image: url('../images/fondo.jpg');
+}
+
+h1{
+	font-family: 'Coming Soon', cursive;
+	text-align: center;
+	font-size: 86px;
+	color: #720101;
+	background-color: white;
+}
+
+h4{
+	font-family: 'Coming Soon', cursive;
+	text-align: center;
+	font-size: 26px;
+	color: #06067D;
+	background-color: white;
+}
+
+
+/*ESTILOS para columnas*/
+section{
+	clear:left;
+	background-color: #FFF;
+}
+
+.columnas{
+	width: 22%;
+	float: left;
+	margin: 10px 5px;
+	margin-right: 35px;
+}
+
+input, #res{
+	font-family: 'Coming Soon', cursive;
+	text-align: center;
+	font-size: 28px;
+	color: #06067D;
+	background-color: white;
+}
+
+.opr{
+	font-size: 70px;
+	color: #33CC33;
+}
+
+#gif{
+	align: middle;
+}
+
+footer div{
+	clear: left;
+	text-align: center;
+}
+
+footer a{
+	text-decoration:none;
+}
+
+p{
+	font-family: 'Coming Soon', cursive;
+}
+
+h3{
+	font-family: 'Coming Soon', cursive;
+	text-align: center;
+	font-size: 26px;
+	color: #FF6600;
+}
+
+#res{
+	align: middle;
+	color: red;
+}
+
+

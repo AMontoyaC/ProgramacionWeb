@@ -1,0 +1,2 @@
+Pagina web de un intercambio de navidad, en el cual eliges al azar un recuedro y te indica la persona a la que le tienes que dar.
+Puedes ver las sugerencias de regalo de esta persona, asi como añadir tus propias sugerencias.

@@ -1,0 +1,16 @@
+CREATE OR REPLACE FUNCTION actualizarV(iv integer, m text, mod text, it integer, pl text, c text, a text,obs text,id_cart integer,car1 integer, car2 integer, car3 integer, car4 integer, car5 integer, car6 integer)
+  RETURNS text AS
+$BODY$
+DECLARE
+BEGIN
+update caracteristicas set seguro=car1, aireacond=car2,estereo=car3,bolsasas=car4,frenosd=car5,birloss=car6 where id_caract=id_cart;
+
+update vehiculo set marca=m,modelo=mod,id_transm=it,placas=pl,color=c,año=a,observaciones=obs where id_vehiculo=iv;
+
+RETURN 1;
+ROLLBACK;
+END;
+$BODY$
+  LANGUAGE plpgsql
+
+select actualizarV(1,'Ford','Sentra',1,'GGG','rojo','2000','',1,0,0,0,0,0,0);

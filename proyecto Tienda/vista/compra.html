@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Compras</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/miestilo.css">
+    
+    <script src="js/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/miestilo.css">
+    <script type="text/javascript" src="js/F_formulario_sesion.js"></script>
+   <script  src="js/funciones2.js"></script>
+
+    <link href='http://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
+    
+  </head>
+  <body>
+  <div class="container text-center">   
+
+    <div class="row">
+    <!--primera barra-->
+        <div class="container text-justify">
+            <div class="row">   
+                <div class="col-md-12"> 
+                    <nav class="navbar navbar-default" id="barra" role="navigation">
+                        <div class="navbar-header">
+                        <div class="collapse navbar-collapse navbar-ex1-collapse">
+                        <form class="navbar-form navbar-left" role="search">
+                        <div class="row">
+                        <div class="col-md-3">
+                            <img src="img/titulo.png" alt="imagen" id="imgtitulo" width="50%"> 
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row">
+                            <img src="img/nombre.png" alt="imagen" id="imgnombre" width="100%">
+                        </div>
+                        <div class="row">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Buscar" id="barrabusq">
+                            </div>
+                            <button type="submit" class="btn btn-default"><img src="img/buscar.png" id="btnbuscar" align="center"></button>
+                        </div>
+                        </div>
+                        <div class="col-md-3">
+                        </div>
+                        </div>
+                        </form>
+                        </div>                          
+                        </div>
+                    </nav>              
+                </div>
+            </div>
+        </div>
+    <!--termina -->
+
+
+    <div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+            <!--<table>
+              <tr>
+                <th>PRODUCTO              </th>
+                <th>TIEMPO ESTIMADO DE ENTREGA                         </th>
+                <th>PRECIO                  </th>
+                <th>PAGOS DESDE                 </th>
+                <th>CANTIDAD                </th>
+                <th>SUBTOTAL              </th>
+              </tr>
+              <tr>
+                <td> <img src="" id="imgProd" width="30%" height="25%"> </td>
+                <td>4 dias</td>
+                <td>2,000</td>
+                <td>300</td>
+                <td>
+                    <select class="form-control">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    </select>
+                </td>
+                <td>
+                 <label>2345</label>
+                 <img src="img/eliminar.png" alt="imagen" id="imgC1" class="producto">
+                </td>
+              </tr>
+
+              <tr>
+                <td><img src="" id="imgProd2" width="30%" height="25%"></td>
+                <td>2 dias</td>
+                <td>70434</td>
+                <td>299</td>
+                <td>
+                    <select class="form-control">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    </select>
+                </td>
+                <td>
+                <label>70398</label>
+                 <img src="img/eliminar.png" alt="imagen" id="imgC1" class="producto"> 
+                </td>
+              </tr>
+            </table>-->
+            <div class="row">
+              <div class="col-md-12">
+              <table>
+              <tr>
+                <th>PRODUCTO              </th>
+                <th>TIEMPO ESTIMADO DE ENTREGA                         </th>
+                <th>PRECIO                  </th>
+                <th>PAGOS DESDE                 </th>
+                <th>CANTIDAD                </th>
+                <th>SUBTOTAL              </th>
+              </tr>   
+<?php
+                //lo que hara es que estara apuntando al siguiente y al siguiente
+              while($dat_cans=mysql_fetch_array($con_cans))                  
+              {
+                    echo "<TR>";//despues del amperson se manda el nombre por url
+                    echo "<TD><A HREF='../controlador/canasta_cont.php?opc=2&id_canasta=".$dat_cans['id_canasta']."</TD>";
+                    echo "<TD>".$dat_cans['cantidad']."</TD>";
+                    echo "<TD>".$dat_cans['total']."</TD>";
+                    echo "<TD>".$dat_cans['id_producto']."</TD>";
+                    echo "<TD>".$dat_cans['id_cliente']."</TD>";
+                    echo "</TR>";
+    
+           
+
+              }
+?>
+
+              </table>
+              </div>
+            </div>
+            <br>
+    </div>
+
+    <div class="col-md-2">
+    </div>
+    </div>
+
+    
+
+    <div class="row">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-8">
+        </div>
+        <div class="col-md-2">
+              <button type="submit" class="btn btn-default" id="btnpago"><a href="http://localhost/proyecto%20Tienda2/vista/resumenc.html" class="link" ><img src="img/btnpagar.jpg" id="btnpagar" align="center"></a></button><input type="text" class="form-control" id="fecha" value="hola" >
+             <input type="text" class="form-control" id="id_can" value="hey" >
+        </div>
+    </div>
+    <br>
+
+    <div class="row">
+        <ol class="breadcrumb" id="barrai">
+            <li class="active">TODOS LOS DERECHOS RESERVADOS © 2015</a></li>
+            <li><a href="#"> ACERCA DE CLEOPATRAS </a></li>
+            <li><a href="#">POLÍTICAS DE PRIVACIDAD </a></li>
+            <li><a href="#"> SERVICIO AL CLIENTE </a></li>
+        </ol>
+    </div>
+</div>
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  </body>
+</html> 

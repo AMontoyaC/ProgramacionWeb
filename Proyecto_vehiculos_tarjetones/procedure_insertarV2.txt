@@ -1,0 +1,30 @@
+CREATE OR REPLACE FUNCTION insertarv2(ip integer, m text, mod text, it integer, pl text, c text, a text,obs text,car1 integer, car2 integer, car3 integer, car4 integer, car5 integer, car6 integer)
+  RETURNS text AS
+$BODY$
+DECLARE
+numic integer;
+act integer;
+total integer;
+BEGIN
+act := (select activo from propietario where id_propietario=ip);
+	IF(act=1) THEN
+		total = (select COUNT(id_propietario) from vehiculo where id_propietario=ip);
+		IF total < 2 then
+			insert into caracteristicas(seguro,aireacond,estereo,bolsasas,frenosd,birloss) values (car1,car2,car3,car4,car5,car6);
+			numic := (select currval('caracteristicas_id_caract_seq'));
+			insert into vehiculo(id_propietario,marca,modelo,id_transm,placas,color,año,id_caract,observaciones) values (ip,m,mod,it,pl,c,a,numic,obs);
+			act = 1;
+		ELSE
+			act = 0;
+		END IF;
+	ELSE
+		act = 0;
+	END IF;
+RETURN act;
+ROLLBACK;
+END;
+$BODY$
+  LANGUAGE plpgsql
+
+
+select insertarV2(1,'Ford','Sentra',1,'GGG','rojo','2000','',0,0,0,0,0,0);

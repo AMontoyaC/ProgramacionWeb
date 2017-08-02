@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script type="text/javascript">
+        function Enviar(opc)
+        {
+            document.frmCliente.action = "../controlador/cliente_cont.php?opc="+opc;
+            document.frmCliente.submit();
+        }
+
+    </script>
+
+
+    <title>Cuentas</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/miestilo_2.css">
+    
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/F_formulario_sesion.js"></script>
+
+    <link href='http://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
+    
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+  </head>
+  <body>
+  <div class="container text-center">
+    <div class="row">
+    <!--primera barra-->
+        <div class="container text-justify">
+            <div class="row">   
+                <div class="col-md-12"> 
+                    <nav class="navbar navbar-default" role="navigation">
+                        <div class="navbar-header">
+                        <div class="collapse navbar-collapse navbar-ex1-collapse">
+                        <form class="navbar-form navbar-left" role="search">
+                        <div class="row">
+                        <div class="col-md-3">
+                            <img src="img/titulo.png" alt="imagen" id="imgtitulo" width="50%"> 
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row">
+                            <img src="img/nombre.png" alt="imagen" id="imgnombre" width="100%">
+                        </div>
+                        <div class="row">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Buscar" id="barrabusq">
+                            </div>
+                            <button type="submit" class="btn btn-default"><img src="img/buscar.png" id="btnbuscar" align="center"></button>
+                        </div>
+                        </div>
+                        <div class="col-md-3">
+                        </div>
+                        </div>
+                        </form>
+                        </div>                          
+                        </div>
+                    </nav>              
+                </div>
+            </div>
+        </div>
+    <!--termina -->
+    </div>
+
+
+    <div class="row"> 
+        <div class="col-md-12"> 
+          <nav class="navbar navbar-default" role="navigation">
+            <div class="navbar-header">
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" id='inicio'>
+                    Inicio</a>
+                     </li>
+                    <li class="dropdown" id="qs"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    Quiénes somos</b></a>
+                    </li>
+                    
+                    <li class="dropdown" id="productos"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    Productos <b class="caret"></b></a>
+                     <ul class="dropdown-menu">
+                      <li><a href="http://localhost/proyecto%20Tienda/vista/celulares.html">Celulares y Tablets</a></li>
+                      <li><a href="http://localhost/proyecto%20Tienda/vista/tv.html">Tv, Audio y Fotografía</a></li>
+                      <li><a href="http://localhost/proyecto%20Tienda/vista/compu.html">Computadoras y Videojuegos</a></li>
+                     </ul>
+                     </li>
+
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    Contáctanos</b></a>
+                    </li>
+                  </ul>
+                </div>    
+            </div>
+          </nav>
+        </div>
+        </div>
+
+    <h1></h1>
+    <div class="row">
+    	<div class="col-md-7">
+            <label for="titulo" id="titulo">REGÍSTRATE O INICIA SESIÓN</label>
+            <br><br>
+
+    		<form class="form-horizontal" method="post" action="" name="frmCliente">
+
+            <div class="form-group">
+                <div class="col-sm-8" align="right">
+                    <label class="radio-inline">
+                        <input type="radio" name="roi" id="roi1" checked="checked"><label id="lblroi1">Soy un nuevo usuario</label>
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="roi" id="roi2"><label id="lblroi2"> Ya tengo cuenta </label>
+                    </label>
+                </div>
+                <br><br>
+            </div>
+
+            <div class="form-group">
+                <label for="usuario" class="col-sm-3 control-label" id="lblusuario">Usuario:</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" name="txtusuario" id="txtusuario">
+                    </div>
+            </div>
+
+            <div class="form-group">
+                <label for="password" class="col-sm-3 control-label" id="lblpassword">Contraseña:</label>
+                <div class="col-sm-4">
+                    <input type="password" class="form-control" name="txtpassword" id="txtpassword">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="lblnom" class="col-sm-3 control-label" id="lblnom">Nombre: </label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" name="txtnom" id="txtnom">
+                    </div>
+            </div>
+
+            <div class="form-group">
+                <label for="lblnom" class="col-sm-3 control-label" id="lblapepat">Apellido Paterno: </label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" name="txtapepat" id="txtapepat">
+                    </div>
+            </div>
+
+            <div class="form-group">
+                <label for="lblnom" class="col-sm-3 control-label" id="lblapemat">Apellido Materno: </label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" name="txtapemat" id="txtapemat">
+                    </div>
+            </div>
+
+            <div class="form-group">
+                <label for="lblnom" class="col-sm-3 control-label" id="lbldir">Dirección: </label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" name="txtdir" id="txtdir">
+                    </div>
+            </div>
+
+            <div class="form-group">
+                <label for="lblnom" class="col-sm-3 control-label" id="lblciu">Ciudad: </label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" name="txtciu" id="txtciu">
+                    </div>
+            </div>
+
+            <div class="form-group">
+                <label for="lblnom" class="col-sm-3 control-label" id="lblcp">Código Postal: </label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" name="txtcp" id="txtcp">
+                    </div>
+            </div>
+
+            <div class="form-group">
+                <label for="lblnom" class="col-sm-3 control-label" id="lbltel">Teléfono: </label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" name="txttel" id="txttel">
+                    </div>
+            </div>
+
+            <div class="form-group">
+                <label for="email" class="col-sm-3 control-label" id="lblemail">E-mail:</label>
+                    <div class="col-sm-4">
+                        <input type="email" class="form-control" name="txtemail" id="txtemail">
+                    </div>
+            </div>
+
+
+            <div class="g-recaptcha" data-sitekey="6LdmogcTAAAAAKOF6Rr86qahuYlVYDdbADp0ypWZ" align="center" id="captcha"></div>
+
+            <div class="form-group" align="center">
+                <input class="btn" type="submit" value="Registrarme" id="btnreg" onclick="Enviar(1)">
+            </div>
+            <div class="form-group" align="center">
+                <input class="btn" type="submit" value="Iniciar Sesión" id="btnini" onclick="Enviar(2)">
+            </div>
+
+
+    		</form>
+    	</div>	
+
+    	<div class="col-md-5">
+        <br><br><br>
+            <img src="img/promo1.jpg" alt="imagen" id="img" width="100%"> 
+    	</div>	
+        </div>
+	</div>	
+</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  </body>
+</html> 

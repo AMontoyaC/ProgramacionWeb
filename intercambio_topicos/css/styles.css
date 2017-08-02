@@ -1,0 +1,123 @@
+body {
+	background: url(../images/arboles1.jpg);
+	font-family: Verdana sans-serif;
+	margin: 0;
+}
+
+#wrapper {
+	margin: 5px auto;
+	/*background-color: #ccc;
+	border: 1px solid #000;*/
+	width: 80%;
+	height: 100%;
+	padding: 30px;
+	opacity: 0.9;
+	text-align: center;
+}
+
+li{
+	font-family: Verdana;
+	font-size: 21pt;
+}
+
+p{
+	color: black;
+	font-size: 14pt;
+	font-family: Verdana;
+}
+
+#pheader{
+	font-family: 'PT Sans Narrow', sans-serif;
+	color: white;
+}
+
+#dialog,p,li,#pheader,#selectParticipantes{
+	font-family: 'Pacifico', cursive;
+	font-size: 18pt;
+
+}
+.recuadro{
+	width: 286px;
+	height: 286px;
+	background: url(../images/c1.jpg);
+	border: 3px solid #663300;
+	display: block;
+	float: left;
+	margin: 0px 10px 10px 0px;
+	cursor: pointer;
+	font-size: 30pt;
+	text-align: center;
+	color: #fff;
+}
+
+.recuadro2{
+	width: 500px;
+	height: 286px;
+	border: 3px solid #663300;
+	display: block;
+	float: left;
+	margin: 0px 10px 10px 0px;
+	cursor: pointer;
+	font-size: 30pt;
+	text-align: center;
+	color: #fff;
+	background-color: white;
+}
+
+
+.ui-dialog-titlebar-close {
+  visibility: hidden;
+}
+
+header{
+	text-align: justify;
+	border: 1px solid #000;
+	padding: 10px;
+	margin-bottom: 10px;
+	background-color: #990000;
+	opacity: 0.9;
+}
+
+#btnSugerencias{
+	background:none;
+}
+#btnsalir{
+	background:none;
+}
+section{
+	margin-left: 50px;
+}
+
+.btn_enabled{
+	border: 1px solid #000;
+	background-color: #fff;
+	color: green;
+	font-size: 13pt;
+}
+
+.btn_disabled{
+	border: 1px solid #000;
+	background-color: #eee;
+	color: gray;
+	font-size: 13pt;
+}
+
+#txtSugerencias{
+	width: 100%;
+	height: 80px;
+}
+
+#instrucciones{
+	color: #fff;
+	font-size: 16pt;
+}
+
+#sugerencias-content{
+	background: url(../images/fondo3.jpg);
+	font-size: 16pt;
+	color: white;
+	text-align: justify;
+	width: 300px;
+	height: 300px;
+	padding: 5px;
+}

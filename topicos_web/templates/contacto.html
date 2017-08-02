@@ -1,0 +1,45 @@
+<h1> Contacto </h1>
+
+<div class="main-content">
+<form name="frmContacto" methond="post" action="#">
+	<table class="tabla-contacto">
+		<tr>
+			<th colspan="2">Formulario de Contacto</th>
+		</tr>
+		<tr>
+			<td><span class="etiquetas">Nombre *</span></td>
+			<td><input type="text" name="nombres" value="" required></td>
+		</tr>
+		<tr>
+			<td><span class="etiquetas">Apellidos</span></td>
+			<td><input type="text" name="apellidos" value=""></td>
+		</tr>
+		<tr>
+			<td><span class="etiquetas">Email *</span></td>
+			<td><input type="email" name="email" value="" required></td>
+		</tr>
+		<tr>
+			<td><span class="etiquetas">Fecha</span></td>
+			<td><input type="date" name="fecha" value=""></td>
+		</tr>
+		<tr>
+			<td><span class="etiquetas">Asunto *</span></td>
+			<td><select>
+				<option>Elegir</option>
+				<option>Sugerencia</option>
+				<option>Reportar falla</option>
+				<option>Saludar</option>
+			</select></td>
+		</tr>
+		<tr>
+			<td><span class="etiquetas">Descripci&oacute;n</span></td>
+			<td><textarea name="descripcion" rows="3"></textarea></td>
+		</tr>
+		<tr>
+			<td><input class="btn-submit" type="submit" name="btnSubmit" 					value="Enviar" 
+				onMouseOver="this.className='btn-submit-over'" 
+				onMouseOut="this.className='btn-submit'"></td>
+		</tr>
+	</table>
+</form>
+</div>

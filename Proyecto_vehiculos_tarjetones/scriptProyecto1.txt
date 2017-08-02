@@ -1,0 +1,58 @@
+create database proyecto1
+psql Proyecto1
+
+CREATE USER usuarioAdmin PASSWORD '123456';
+
+create table categoria(
+	id_categoria serial primary key,
+	descripcion char(30) not null
+);
+
+create table propietario(
+	id_propietario SERIAL primary key not null,
+	nombre char(20),
+	apellidos char(40),
+	domicilio char(30),
+	telefono int,
+	id_categoria int,
+	no_licencia int,
+	tarjeta_circulacion char(15),
+	activo char(1),
+	constraint fk__propietario foreign key(id_categoria)
+	references categoria (id_categoria)
+);
+
+create table caracteristicas(
+	id_caract serial primary key not null,
+	seguro char(1),
+	aireAcond char(1),
+	estereo char(1),
+	bolsasAS char(1),
+	frenosD char(1),
+	birlosS char(1)
+);
+
+
+create table transmision(
+	id_transm serial not null primary key,
+	descripcion char(20)
+);
+
+create table vehiculo(
+	id_vehiculo serial not null primary key,
+	id_propietario int,
+	marca char(20),
+	modelo char(20),
+	id_transm int,
+	placas char(7),
+	color char(15),
+	año char(4),
+	id_caract int,
+	observaciones char(50),
+	constraint fk1_vehiculo foreign key(id_propietario)
+	references propietario (id_propietario),
+	constraint fk2_vehiculo foreign key(id_caract)
+	references caracteristicas (id_caract),
+	constraint fk3_vehiculo foreign key(id_transm)
+	references transmision (id_transm)
+);

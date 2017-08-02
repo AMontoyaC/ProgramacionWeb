@@ -1,0 +1,14 @@
+CREATE OR REPLACE FUNCTION eliminarV(iv integer,id_cart integer)
+  RETURNS text AS
+$BODY$
+DECLARE
+BEGIN
+delete from vehiculo where id_vehiculo=iv;
+delete from caracteristicas where id_caract=id_cart;
+RETURN 1;
+ROLLBACK;
+END;
+$BODY$
+  LANGUAGE plpgsql
+
+select eliminarV(4,4);

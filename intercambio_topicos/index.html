@@ -1,0 +1,127 @@
+<html>
+<head>
+	    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Intercambio navideño</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+	<title>Sorteo intercambio fin de año - Familia De los Santos</title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="stylesheet" type="text/css" href="js/jquery-ui/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="js/fancybox/jquery.fancybox.css?v=2.1.5" media="screen" />
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<script src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/scripts.js"></script>
+	<script src="js/jquery-ui/jquery-ui.js"></script>
+	<script src="js/fancybox/jquery.fancybox.js?v=2.1.5"></script>
+	<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+	<div id="wrapper">
+		<header class="header-container" >
+			<div id="instrucciones">
+				<p id="pheader">Cada uno de los recuadros representa a un participante en el intercambio.</p>
+				<div class="row">
+					<div class="col-md-1">
+					</div>
+					<div class="col-md-2">
+						<img src="images/ARBOL2.gif" id="btnbuscar" align="center" width="100%" height="45%">
+					</div>
+					<div class="col-md-8">
+
+				<p id="pheader">Procedimiento:</p>
+				<ol>
+					<li>Elige uno de los recuadros. Aparecer&aacute; la foto de la persona a quien le dar&aacute;s un regalo.</li>
+					<li>En caso de seleccionar una persona ya elegida, se te solicitara volver a seleccionar un recuadro</li>
+					<li>Una vez que sabes a quien le regalar&aacute;s, escribe 3 recomendaciones de regalos que te gustar&iacute;a recibir. Para esto da click en el bot&oacute;n "Mis Sugerencias de Regalo".</li>
+					<li>Podr&aacute;s ver las sugerencias de la persona que te toc&oacute; hasta el momento en que (&eacute;l o ella) las haya captudado. Para esto, podr&aacute;s acceder nuevamente a la p&aacute;gina con las contrase&ntilde;a que elegiste y te mostrará la imagen de tu compa&ntilde;ero(a) as&iacute; como sus sugerencias.</li>
+
+				</ol>
+				</div>
+
+				</div>
+			</div>
+			<div>
+				<button type="submit" id="btnSugerencias" class="btn_enabled" width="50%" hight="50%"><img src="images/btnsug.jpg" id="btnbuscar" align="center">
+				<a href="#sugerencias-content" class="fancybox" style="display:none;">Sugerencias compa&ntilde;ero(a)</a></button>			
+				
+				<button type="Button" id="btnsalir" class="btn_enabled" value="Salir" onClick="document.location='index.html';" width="50%" hight="50%"><img src="images/btnsalir.jpg" id="btnbuscar" align="center"></button>		
+			</div>
+		</header>
+		<section id="section">
+		</section>	
+	</div>
+	<div id="dialog" title="Bienvenido" style="font-family:Lucida Handwriting">
+		<p style="font-size: 20pt;">
+			Bienvenido al sistema de elecci&oacute;n de compa&ntilde;ero(a) en el intercambio de regalos de la familia <b>De los Santos</b>"
+			<br><br>
+			<b>Instrucciones:</b>
+			<ol style="font-size: 10pt;">
+				<li>Elige tu nombre de la lista.</li>
+				<li>Si es la primera vez que accedes, asigna una nueva contrase&ntilde;a. De lo contrario, proporciona la contrase&ntilde;a que elegiste previamente.</li>
+				<li>Presiona el boton "Ok" para acceder.</li>
+			</ol>
+		</p>
+		<form><p>
+			Elige:</p><br>
+			<select id="selectParticipantes">
+				<option value="0" selected>Selecciona</option>
+				<option value="1">ARTURO</option>
+				<option value="2">ARTUR</option>
+				<option value="3">GLENDA</option>
+				<option value="4">ALFA</option>
+				<option value="5">MONI</option>
+				<option value="6">FREDY</option>
+				<option value="7">ISIEL</option>
+				<option value="8">CHEVO</option>
+				<option value="9">DANIEL</option>
+				<option value="10">ELVI</option>
+				<option value="11">SILVIA</option>
+				<option value="12">GIL</option>
+				<option value="13">MYRTA</option>
+				<option value="14">JAMILA</option>
+				<option value="15">MATEO</option>				
+				<option value="16">VERO</option>
+			</select>
+			<input type="hidden" id="modo" value="">
+			<input type="hidden" id="id_part" value="">
+			<input type="password" placeholder="Escribe tu contraseña" id="password" value="" style="display:none;font-size: 10pt; height: 30px;" />
+		</form>
+	</div>
+	<div id="dialogSugerencias" title="Sugerencias de regalo.">
+		<p>Escribe 3 sugerencias de regalo que te gustar&iacute;a recibir:</p>
+		<form>
+		<script type="text/javascript">
+	      var keynum, lines = 1;
+
+	      function limitLines(obj, e) {
+	        // IE
+	        if(window.event) {
+	          keynum = e.keyCode;
+	        // Netscape/Firefox/Opera
+	        } else if(e.which) {
+	          keynum = e.which;
+	        }
+
+	        if(keynum == 13) {
+	          if(lines == obj.rows) {
+	            return false;
+	          }else{
+	            lines++;
+	          }
+	        }
+	      }
+	      </script>
+			<textarea rows="3" id="txtSugerencias" placeholder="Sugerencias..." onkeydown="return limitLines(this, event)">
+			</textarea>
+		</form>
+	</div>
+	<div style="display:none;">
+		<div id="sugerencias-content"></div>
+	</div>
+
+</body>
+</html>

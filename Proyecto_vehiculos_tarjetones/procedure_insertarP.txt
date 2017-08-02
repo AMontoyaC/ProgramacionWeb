@@ -1,0 +1,17 @@
+CREATE OR REPLACE FUNCTION insertarP(n text,ap text,dir text,tel integer,idcat integer,nol integer, tarj text)
+  RETURNS text AS
+$BODY$
+DECLARE
+act integer;
+BEGIN
+insert into propietario (nombre, apellidos, domicilio, telefono, id_categoria,no_licencia, tarjeta_circulacion, activo) values (n,ap,dir,tel,idcat,nol,tarj,'1');
+
+act = (select id_propietario from propietario where nombre=n and apellidos=ap and domicilio=dir and telefono=tel and id_categoria= idcat and no_licencia=nol and tarjeta_circulacion=tarj);
+RETURN act;
+ROLLBACK;
+END;
+$BODY$
+  LANGUAGE plpgsql
+
+
+select insertarP('Andrea','Montoya','Trojes',6142801,2,123456,'999RT');
